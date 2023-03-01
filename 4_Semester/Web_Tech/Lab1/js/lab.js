@@ -5,18 +5,17 @@ function doFactorial(){
     for(let i=1; i<=x;i++){
         factorial*=i;
     }
-    for(let i=x; i>=0;i-=2){
+    for(let i=x; i>=1;i-=2){
         double_factorial*=i;
     }
-    resultOut.innerHTML=`Factorial of number equals ${factorial}.`
+    resultOut.innerHTML=`Factorial of number equals ${factorial}.<br>Double Factorial of number equals ${double_factorial}`
 }
 function doCount(){
     let input=document.querySelector("#task2 input").value;
     let arr=input.toString();
     arr=arr.split(" ")  
     let res=[];
-    res[0]={text:arr[0], reps:1};
-    for (let i=1;i<arr.length;i++){
+    for (let i=0;i<arr.length;i++){
         rep=0
         for(let j=0;j<res.length;j++){
             if(arr[i]==res[j].text){
