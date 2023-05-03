@@ -1,0 +1,7 @@
+struct point
+
+max,min for x and y;
+
+function for check if inside{
+in loop check every side with line p,p', when p=x,y; p'=x_max,y;
+
