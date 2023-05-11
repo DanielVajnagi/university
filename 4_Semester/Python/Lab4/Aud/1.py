@@ -1,0 +1,12 @@
+from tkinter import *
+ventana = Tk()
+v = IntVar(); m = IntVar()
+ventana.title("Radiobutton")
+ventana.geometry("200x150")
+etiquental = Label(ventana,text="Radio demos").place(x=20,y=20)
+Color=Radiobutton(ventana,text="Color",variable=v,value=0).pack()
+Query=Radiobutton(ventana,text="Query",variable=v,value=1).pack()
+Input=Radiobutton(ventana,text="Input",variable=v,value=2).pack()
+Open=Radiobutton(ventana,text="Open",variable=v,value=3).pack()
+Error=Radiobutton(ventana,text="Error",variable=v,value=4).pack()
+ventana.mainloop()
