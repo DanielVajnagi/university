@@ -38,7 +38,7 @@ sub_menu.add_command(label='Графік sin(x)', command=plot_sin)
 sub_menu.add_command(label='Графік cos(x)', command=plot_cos)
 sub_menu.add_separator()
 sub_menu.add_command(label='Інформація про програму', command=lambda: tk.messagebox.showinfo('Інформація',
-                                                                                             'Ця програма малює графіки функцій sin(x) та cos(x) на відрізку [-10, 10] у декартовій системі координат. \n Created by @daniel_vajnagi'))
+                                                                                             'Ця програма малює графіки функцій sin(x) та cos(x) на відрізку [-10, 10] у декартовій системі координат. n Created by @daniel_vajnagi'))
 sub_menu.add_command(label='Вихід', command=window.quit)
 
 window.mainloop()

@@ -11,7 +11,7 @@ def bezier_curve(p0, p1, p2, p3):
 p0 = (1, 1)
 p1 = (2, 5)
 p2 = (6, 4)
-p3 = (7, 2)
+p3 = (7, 2) 
 
 x, y = bezier_curve(p0, p1, p2, p3)
 
@@ -21,6 +21,5 @@ plt.plot([p[0] for p in [p0, p1, p2, p3]], [p[1] for p in [p0, p1, p2, p3]], 'ro
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title('Cubic Bezier Curve')
-plt.legend(loc='best')
 plt.grid(True)
 plt.show()

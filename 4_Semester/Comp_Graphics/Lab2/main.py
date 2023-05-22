@@ -5,17 +5,17 @@ import numpy as np
 
 # Функція f(z)
 def f(z):
-    return z**3 - 1
+    return z**5 - 1
 
 # Похідна функції f(z)
 def df(z):
-    return 3*z**2
+    return 5*z**4
 
 # Обчислення коренів методом Ньютона
 def newton(z, max_iter=50, epsilon=1e-5):
     for i in range(max_iter):
         dz = df(z)
-        if dz == 0:
+        if dz == 0: 
             return None
         z = z - f(z) / dz
         if abs(f(z)) < epsilon:
@@ -28,11 +28,11 @@ def map_color(z):
     root2 = complex(-0.5, math.sqrt(3)/2)
     root3 = complex(-0.5, -math.sqrt(3)/2)
     
-    if abs(z - root1) < 1e-3:
+    if abs(z - root1) < 1e-5:
         return 255, 0, 0  # Червоний колір для першого кореня
-    elif abs(z - root2) < 1e-3:
+    elif abs(z - root2) < 1e-5:
         return 0, 255, 0  # Зелений колір для другого кореня
-    elif abs(z - root3) < 1e-3:
+    elif abs(z - root3) < 1e-5:
         return 0, 0, 255  # Синій колір для третього кореня
     else:
         return 0, 0, 0  # Чорний колір для інших точок
