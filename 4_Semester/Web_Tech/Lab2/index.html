@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Наш Трикотаж</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header_contacts">
+                    <span class="telefon">0503747851</span><span class="telefon">0996696106</span> <br>
+                    <span class="work_hours">Пн-Пт з 10 до 18</span>
+                    <button class="header_button">Передзвоніть мені!</button>
+                </div>
+                <h1 class="main_title">Наш Трикотаж</h1>
+                <div class="cart">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="link">
+                        <img src="img/basket.png" alt="сart" class="cart_img">
+                        Кошик</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container catalog">
+            </div>
+            <button class="load_more_button">Показати більше</button>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="contacts">
+                    <h3 class="footer_title">Про доставку</h3>
+                    <ul class="footer_contacts">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="link">
+                            <li>Способи оплати</li>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="link">
+                            <li>Про продукцію</li>
+                        </a>
+                    </ul>
+
+                </div>
+
+                <div class="social">
+                    <div class="social_icon">
+                        <a href="https://www.instagram.com/nash_trykotazh/"><img src="img/instagram.png"
+                                alt="instagram logo"></a>
+                    </div>
+                    <div class="social_icon">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></a><img src="img/facebook.png"
+                            alt="facebook logo"></a>
+                    </div>
+                </div>
+
+                <div class="about_us">
+                    <h3 class="footer_title">Про нас</h3>
+                    <ul class="footer_contacts">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="link">
+                            <li>Блог</li>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="link">
+                            <li>Контакти</li>
+                        </a>
+                    </ul>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div onclick="topFunction()" id="myBtn" title="Go to top"></div>
+
+    <div class="overlay">
+        <div class="ad">
+            <div class="ad_close">&times</div>
+            <h3 class="ad_title">Пледи</h3>
+            <img src="img/advertaisment.jpg" alt="advertaisment">
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <div class="subscribe-text">Підпишіться на наші сповіщення</div>
+        <div class="subscribe_wrapper">
+            <button class="card_button" id="subscribeBtn">Підписатися</button>
+            <button class="card_button" id="cancelBtn">Ні, дякую</button>
+        </div>
+    </div>
+
+    <script>
+        function showSubscriptionPopup() {
+            const sub = document.querySelector(".subscribe");
+            sub.style.display = "flex";
+
+            const subscribeBtn = document.getElementById("subscribeBtn");
+            subscribeBtn.addEventListener("click", subscribe);
+
+            const cancelBtn = document.getElementById("cancelBtn");
+            cancelBtn.addEventListener("click", cancel);
+        }
+        function subscribe() {
+            const sub = document.querySelector(".subscribe");
+            sub.style.display = "none";
+            Notification.requestPermission();
+        }
+
+        function cancel() {
+            const sub = document.querySelector(".subscribe");
+            sub.style.display = "none";
+        }
+
+        setTimeout(showSubscriptionPopup,5000);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
