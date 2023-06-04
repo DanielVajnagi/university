@@ -12,7 +12,7 @@ def line_polygon_intersection(A, B, C, P):
         Aj = A*xj + B*yj + C
         
         if Ai * Aj <= 0:
-            intersect = True
+            intersect = True        
             break
         elif Ai == 0 or Aj == 0:
             intersect = True
