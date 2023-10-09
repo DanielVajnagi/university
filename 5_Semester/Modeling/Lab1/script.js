@@ -2,7 +2,7 @@
 
 let epsilon, h_0, h_optimal;
 const x_0 = 1, y_0 = 1, t_0 = 0;
-epsilon = 0.000001
+epsilon = 0.01
 h_0 = 0.1
 h_optimal = find_h_optimal(h_0, epsilon)
 console.log(h_optimal)
@@ -109,7 +109,7 @@ function NA3_x(t, x, y, n) {
     else{
          x_n0=x_n1;
         y_n0=y_n1;
-        console.log(n+'iter')
+        //console.log(n+'iter')
         
     }
 
@@ -124,11 +124,45 @@ for(i=2;t[i]<=1;i++){
     y[i]=xy_i[1];
 
 }
-console.log(x[640])
-console.log(x_accurate[640])
-console.log(y[640])
-console.log(y_accurate[640 ])
+let delta_x=[],delta_y=[];
+delta_x[0]=Math.abs(x_accurate[0]-x[0])
+delta_y[0]=Math.abs(y_accurate[0]-y[0])
+for(i=1;i<x.length;i++){
+    delta_x[i]=Math.abs(x_accurate[i]-x[i]).toFixed(15);
+    delta_y[i]=Math.abs(y_accurate[i]-y[i]).toFixed(15);
+}
 
+dataArray=[t,x_accurate,x,delta_x,y_accurate,y,delta_y]
 
+function createTable(tableData) {
+    let table = document.createElement('table');
+    let tableBody = document.createElement('tbody');
+    
+   
+        let row = document.createElement('tr');
+        THs=['t','x abs','x','delta x','y abs','y','delta y']  
+        THs.forEach(function(rowData) {
+          let cell = document.createElement('th');
+          cell.appendChild(document.createTextNode(rowData));
+          row.appendChild(cell);
+        });
+    
+        tableBody.appendChild(row);
+      ;
 
-
+    tableData.forEach(function(cellData) {
+      let row = document.createElement('td');
+        
+      cellData.forEach(function(rowData) {
+        let cell = document.createElement('tr');
+        cell.appendChild(document.createTextNode(rowData));
+        row.appendChild(cell);
+      });
+  
+      tableBody.appendChild(row);
+    });
+  
+    table.appendChild(tableBody);
+    document.body.appendChild(table);
+  }
+  createTable(dataArray);
