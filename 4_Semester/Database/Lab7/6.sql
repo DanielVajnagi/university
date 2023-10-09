@@ -1,0 +1,1 @@
+SELECT * FROM Items ORDER BY Price DESC;
