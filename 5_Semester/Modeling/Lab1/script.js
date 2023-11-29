@@ -2,7 +2,7 @@
 
 let epsilon, h_0, h_optimal;
 const x_0 = 1, y_0 = 1, t_0 = 0;
-epsilon = 0.01
+epsilon = 0.001
 h_0 = 0.1
 h_optimal = find_h_optimal(h_0, epsilon)
 console.log(h_optimal)
@@ -140,7 +140,7 @@ function createTable(tableData) {
     
    
         let row = document.createElement('tr');
-        THs=['t','x abs','x','delta x','y abs','y','delta y']  
+        THs=['t','x точне','x','delta x','y точне','y','delta y']  
         THs.forEach(function(rowData) {
           let cell = document.createElement('th');
           cell.appendChild(document.createTextNode(rowData));

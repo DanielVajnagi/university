@@ -1,0 +1,21 @@
+<div class="container">
+    
+    <app-menu></app-menu>
+  <h1>Сторінка входу</h1>
+    <form (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="username" class="form-label">Ім'я користувача:</label>
+        <input type="text" id="username" name="username" class="form-control" required [(ngModel)]="username">
+      </div>
+  
+      <div class="mb-3">
+        <label for="password" class="form-label">Пароль:</label>
+        <input type="password" id="password" name="password" class="form-control" required [(ngModel)]="password">
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Увійти</button>
+    </form>
+    <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+    
+  </div>
+  

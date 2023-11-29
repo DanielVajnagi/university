@@ -1,0 +1,29 @@
+/* menu.component.css */
+nav {
+    background-color: #007bff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 10px;
+    text-align: left; /* Зміна напрямку тексту на лівий */
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 40px; /* Збільшення відступу між елементами */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    transition: color 0.3s ease;
+    
+  }
+  
+  nav a:hover {
+    color: #0056b3;
+  }

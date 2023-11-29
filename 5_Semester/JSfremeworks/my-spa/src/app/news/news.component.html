@@ -1,0 +1,13 @@
+<!-- news.component.html -->
+<div class="container">
+    
+    <app-menu></app-menu><h1>Сторінка новин</h1>
+    <div class="content">
+        <div *ngFor="let newsItem of newsList">
+          <h3>{{ newsItem.title }}</h3>
+          <p>{{ newsItem.content }}</p>
+          <hr>
+        </div>
+      </div>
+  </div>
+  

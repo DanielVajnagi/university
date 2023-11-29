@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/">Головна </a></li>
+        <li><a routerLink="/news">Новини </a></li>
+        <li *ngIf="isAuthenticated"><a routerLink="/profile">Профіль </a></li>
+        <li *ngIf="!isAuthenticated"><a routerLink="/login">Профіль </a></li>
+        <li *ngIf="!isAuthenticated && !isLoginPage()"><a routerLink="/login">Увійти</a></li>
+        <li *ngIf="isAuthenticated"><a (click)="logout()">Вийти</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

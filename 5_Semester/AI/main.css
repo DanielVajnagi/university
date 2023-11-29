@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"Calibri", 'Trebuchet MS', sans-serif ;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+:root{
+    --border-black:2px solid black;
+}
+
+canvas{
+    margin: 20px;
+    border: var(--border-black);
+    width: 300px;
+    height: 300px;
+}
+
+.btn{
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+
+    background-color: transparent;
+    border: var(--border-black);
+}
+
+.btn:hover{
+    background-color: rgb(184, 184, 184);
+}
+
+#addEtalonBtn {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }

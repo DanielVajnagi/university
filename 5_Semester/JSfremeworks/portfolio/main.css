@@ -1,0 +1,139 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+    font-family: "Space Grotesk", "Helvetica";
+}
+
+:root {
+    --color-main: rgb(160, 68, 193);
+}
+
+/*--- navigation bar ---*/
+.navbar {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--color-main);
+    padding: 5px 40px;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/*---header---*/
+
+.header {
+
+    background-image: url('images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: repeat;
+
+}
+
+/*overlay*/
+
+.overlay {
+    padding: 0;
+    margin-bottom: 0;
+    justify-content: space-between;
+
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgb(255, 255, 255, 0.1);
+
+}
+
+.img-cont {
+    height: 100%;
+}
+
+
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 60px 0 30px;
+}
+
+.footer-copyright {
+    color: #666;
+    padding: 40px 0;
+}
+
+
+
+#demo {
+    height: 400px;
+    width: 100%;
+}
+
+.carousel-item {
+    background-color: rgb(224, 227, 232);
+    height: 100%;
+
+}
+
+.carousel-item * {
+    height: 100%;
+}
+
+.page-footer {
+    background-color: var(--color-main);
+}
+
+#about {
+    background-color: var(--color-main);
+}
+
+#about img {
+    max-height: 80px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--color-main);
+}
+
+.aboutCaption {
+    background-color: rgb(224, 227, 232);
+    ;
+}
+
+.features .form-control,
+.features input {
+    border-radius: 0;
+}
+
+.features .btn {
+    background-color: #589b37;
+    border: 1px solid #589b37;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.features .btn:hover {
+    background-color: #333;
+    border: 1px solid #333;
+}
