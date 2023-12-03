@@ -11,7 +11,7 @@ const recognizeOut = document.querySelector(".output");
 
 let pixelColors;
 let n;
-const meshSize = 4; //сітка 2*2
+const meshSize = 4; 
 
 
 let fileName = "";
@@ -90,7 +90,7 @@ function generateVector(pixels) {
   }
 
   vector = normVector(vector);
-
+  console.log(vector)
 
   return vector;
 }

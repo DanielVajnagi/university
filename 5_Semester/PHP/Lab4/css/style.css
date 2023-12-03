@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Formula1;
+    src: url(../font/Formula1-Regular_web_0.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Formula1;
+    src: url(../font/Formula1\ Display\ Bold\ Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Formula1;
+    src: url(../font/Formula1\ Display\ Wide.ttf);
+    font-weight: wide;
+}    
+*{
+    font-family: Formula1;
+    /*font-weight: bold;*/
+}
+
+header{
+font-family: Formula1;
+font-size: 40px;
+font-weight: bold;
+line-height: 48px;
+letter-spacing: 0em;
+text-align: left;
+height: 200px;
+width: 100%;
+left: 90px;
+top: 155px;
+border-radius: 0px;
+background-color: red;
+}
+.news_pic{
+width: 1680px;
+height: 945px;
+left: 120px;
+top: 1184px;
+}
+.news_article{
+    font-family: Formula1;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 38px;
+}
+header>nav{
+    position:relative;
+    left: 120px;
+    top:50px;
+}
+header>nav>a{
+    color:white;
+    text-decoration: none;
+}
+header>nav>a:hover {
+    color:white;
+    text-decoration: underline;
+
+}
+article{
+    left: 120px;
+    position: relative;
+    text-align: justify;
+    width: 1680px;
+}
+article>nav>a{
+    color:black;
+    text-decoration: none;
+}
+article>nav>a:hover {
+    color:gray;
+    text-decoration: none;
+}
+#f1_logo{
+position: relative;
+height: 100px;
+width: 285px;
+border-radius: 0px;
+}
+footer{
+    font-family: Formula1;
+    font-weight: wide;
+    font-size: 12px;
+    position: relative;
+    left: 120px;
+    top: 30px;
+}
+form{
+    position: relative;
+    left: 120px;
+}

@@ -12,7 +12,7 @@ body{
 }
 
 :root{
-    --border-black:2px solid black;
+    --border-black:0px solid rgb(244, 13, 13);
 }
 
 canvas{
@@ -34,7 +34,7 @@ canvas{
 }
 
 .btn:hover{
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(124, 80, 206);
 }
 
 #addEtalonBtn {
