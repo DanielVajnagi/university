@@ -1,6 +1,7 @@
 package labs;
 
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -64,8 +65,14 @@ public class Car extends Vehicle {
             return this;
         }
 
-
+        private void validateNumberOfDoors(int numberOfDoors) {
+            if (numberOfDoors < 1) {
+                validationErrors.add("Number of doors must be more than 0");
+            }
+        }
         public Car build() {
+            super.validateFields();
+            validateNumberOfDoors(numberOfDoors);
             return new Car(this);
         }
     }
