@@ -1,0 +1,72 @@
+<!-- Programming Taskbook 4.4 | Copyright (c) M. Abramyan, 1998-2005 -->
+<html><head><meta http-equiv="pragma" content="no-cache"><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Programming Taskbook 4.4 | Минимумы и максимумы</title>
+</head><body vlink="#003366" link="#003366"><style>
+H1{font-family:"Arial";font-size:20pt;text-indent:0;margin-top:10; margin-right:10; margin-bottom:0; margin-left:10;}
+H2{font-family:"Arial";font-size:16pt;text-indent:0;margin: 20 10 0 10;}
+H3{font-family:"Arial";font-size:12pt;text-indent:0;margin: 20 10 0 10;}
+P{font-family:"Times New Roman";font-size:12pt;text-indent:0;margin-top:0; margin-right:10; margin-bottom:0; margin-left:10;}
+center{font-family:"Times New Roman";font-size:12pt;}
+TABLE{margin-top:0; margin-bottom:0;}
+TD{font-family:"Times New Roman";font-size:12pt;}
+LI{font-family:"Times New Roman";font-size:12pt;}
+UL{font-family:"Times New Roman";font-size:12pt;}
+P.tsk{text-align:left;text-indent:-50;margin-top:5; margin-left:60;}
+P.hnt{text-align:left;margin-left:60;}
+P.hntc{text-align:left;margin-left:60;}
+P.hntq{text-align:left;margin-left: 60;}
+P.cmt{text-align:left;margin-top:5;}
+P.ttt{text-align:left;}
+P.cnt{text-align:center;}
+P.qte{text-align:left;margin-left:120;margin-top:0;margin-bottom:0;}
+blockquote{font-family:"Times New Roman";text-align:left;margin-left:100;margin-top:0; margin-bottom:0;}
+P.cmtc{text-align:left;}
+P.cmtq{text-align:left;}
+SUB{font-family:"Times New Roman";font-size:8pt;}
+SUP{font-family:"Times New Roman";font-size:8pt;}
+P.foot{text-align:right;font-size:8pt;margin-right:0;}
+</style>
+<script language="javascript" src="back.js">
+</script>
+<font face="Arial" size=+3><b>Programming Taskbook 4</b><br></font>
+<font face="Arial" size=+1>Электронный задачник по программированию</font>
+<div align=right><font size = -1>&copy;&nbsp;&nbsp;М.&nbsp;Э.&nbsp;Абрамян,&nbsp;1998&#150;2005</font></div>
+<hr noshade>
+<div align=center><font size=-1>
+[<a href="index.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/index.htm">Общее&nbsp;описание</a>] [<a href="remarks.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/remarks.htm">Предварительные&nbsp;замечания</a>] [<a href="begin.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/begin.htm">Ввод&nbsp;и&nbsp;вывод&nbsp;данных,&nbsp;оператор&nbsp;присваивания</a>] [<a href="integer.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/integer.htm">Целые&nbsp;числа</a>] [<a href="boolean.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/boolean.htm">Логические&nbsp;выражения</a>] [<a href="if.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/if.htm">Условный&nbsp;оператор</a>] [<a href="case.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/case.htm">Оператор&nbsp;выбора</a>] [<a href="for.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/for.htm">Цикл&nbsp;с&nbsp;параметром</a>] [<a href="while.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/while.htm">Цикл&nbsp;с&nbsp;условием</a>] [<a href="series.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/series.htm">Последовательности</a>] [<a href="proc.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/proc.htm">Процедуры&nbsp;и&nbsp;функции</a>] [<b>Минимумы&nbsp;и&nbsp;максимумы</b>] [<a href="array.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/array.htm">Одномерные&nbsp;массивы</a>] [<a href="matrix.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/matrix.htm">Двумерные&nbsp;массивы&nbsp;(матрицы)</a>] [<a href="string.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/string.htm">Символы&nbsp;и&nbsp;строки</a>] [<a href="file.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/file.htm">Двоичные&nbsp;(типизированные)&nbsp;файлы</a>] [<a href="text.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/text.htm">Текстовые&nbsp;файлы</a>] [<a href="param.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/param.htm">Составные&nbsp;типы&nbsp;данных&nbsp;в&nbsp;процедурах&nbsp;и&nbsp;функциях</a>] [<a href="recur.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/recur.htm">Рекурсия</a>] [<a href="pointer.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/pointer.htm">Указатели&nbsp;и&nbsp;динамические&nbsp;структуры&nbsp;данных</a>] [<a href="demo.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/demo.htm">Задания&nbsp;демо-версии</a>]
+</font></div><hr noshade><div align=right><font size=-1>Стиль: [<a href="minmaxd.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/minmaxd.htm">DOS-программа</a>] [<a href="minmaxw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/minmaxw.htm">Windows-программа</a>] [<b>Книга</b>]</font></div>
+
+<p class="cmt"><h1>Минимумы и&nbsp;максимумы</h1></p>
+<p class="cmt">Для решения заданий из&nbsp;данной группы следует использовать &#171;однопроходные&#187; алгоритмы, позволяющие получить требуемый результат после <i>однократного</i> просмотра набора исходных данных. Однопроходные алгоритмы обладают важным преимуществом: для&nbsp;них не&nbsp;требуется хранить в&nbsp;памяти одновременно весь набор данных, поэтому при&nbsp;программной реализации этих алгоритмов <i>можно не&nbsp;использовать массивы</i>.</p>
+<p class="cmt">Во всех заданиях данной группы предполагается, что&nbsp;исходный набор содержит ненулевое количество элементов (в&nbsp;частности, число&nbsp;<i>N</i> всегда больше нуля).</p>
+<p class="tsk"><font face="Arial">Minmax1*</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;чисел. Найти минимальный и&nbsp;максимальный из&nbsp;элементов данного набора и&nbsp;вывести&nbsp;их в&nbsp;указанном порядке.</p>
+<p class="tsk"><font face="Arial">Minmax2</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;прямоугольников, заданных своими сторонами&nbsp;&#151; парами чисел (<i>a</i>,&nbsp;<i>b</i>). Найти минимальную площадь прямоугольника из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax3</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;прямоугольников, заданных своими сторонами&nbsp;&#151; парами чисел (<i>a</i>,&nbsp;<i>b</i>). Найти максимальный периметр прямоугольника из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax4</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;чисел. Найти номер минимального элемента из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax5</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;пар чисел (<i>m</i>,&nbsp;<i>v</i>)&nbsp;&#151; данные о&nbsp;массе&nbsp;<i>m</i> и&nbsp;объеме&nbsp;<i>v</i> деталей, изготовленных из&nbsp;различных материалов. Вывести номер детали, изготовленной из&nbsp;материала максимальной плотности, а&nbsp;также величину этой максимальной плотности. Плотность&nbsp;<i>P</i> вычисляется по&nbsp;формуле </p><center><i>P</i>&nbsp;=&nbsp;<i>m</i>/<i>v</i>.</center>
+<p class="tsk"><font face="Arial">Minmax6</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти номера первого минимального и&nbsp;последнего максимального элемента из&nbsp;данного набора и&nbsp;вывести&nbsp;их в&nbsp;указанном порядке.</p>
+<p class="tsk"><font face="Arial">Minmax7</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти номера первого максимального и&nbsp;последнего минимального элемента из&nbsp;данного набора и&nbsp;вывести&nbsp;их в&nbsp;указанном порядке.</p>
+<p class="tsk"><font face="Arial">Minmax8</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти номера первого и&nbsp;последнего минимального элемента из&nbsp;данного набора и&nbsp;вывести&nbsp;их в&nbsp;указанном порядке.</p>
+<p class="tsk"><font face="Arial">Minmax9</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти номера первого и&nbsp;последнего максимального элемента из&nbsp;данного набора и&nbsp;вывести&nbsp;их в&nbsp;указанном порядке.</p>
+<p class="tsk"><font face="Arial">Minmax10</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти номер первого <i>экстремального</i> (то&nbsp;есть минимального или максимального) элемента из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax11</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти номер последнего <i>экстремального</i> (то&nbsp;есть минимального или максимального) элемента из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax12</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;чисел. Найти минимальное положительное число из&nbsp;данного набора. Если положительные числа в&nbsp;наборе отсутствуют, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Minmax13</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти номер первого максимального нечетного числа из&nbsp;данного набора. Если нечетные числа в&nbsp;наборе отсутствуют, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Minmax14</font>. Дано число&nbsp;<i>B</i> (&gt;&nbsp;0) и&nbsp;набор из&nbsp;десяти чисел. Вывести минимальный из&nbsp;тех элементов набора, которые больше&nbsp;<i>B</i>, а&nbsp;также его номер. Если чисел, больших&nbsp;<i>B</i>, в&nbsp;наборе нет, то&nbsp;дважды вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Minmax15</font>. Даны числа&nbsp;<i>B</i>, <i>C</i> (0&nbsp;&lt;&nbsp;<i>B</i>&nbsp;&lt;&nbsp;<i>C</i>) и&nbsp;набор из&nbsp;десяти чисел. Вывести максимальный из&nbsp;элементов набора, содержащихся в&nbsp;интервале (<i>B</i>,&nbsp;<i>C</i>), и&nbsp;его номер. Если требуемые числа в&nbsp;наборе отсутствуют, то&nbsp;дважды вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Minmax16</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти количество элементов, расположенных перед первым минимальным элементом.</p>
+<p class="tsk"><font face="Arial">Minmax17</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти количество элементов, расположенных после последнего максимального элемента.</p>
+<p class="tsk"><font face="Arial">Minmax18</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти количество элементов, содержащихся между первым и&nbsp;последним максимальным элементом. Если в&nbsp;наборе имеется единственный максимальный элемент, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Minmax19</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти количество минимальных элементов из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax20</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти общее количество <i>экстремальных</i> (то&nbsp;есть минимальных и&nbsp;максимальных) элементов из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax21</font>. Дано целое число&nbsp;<i>N</i> (&gt;&nbsp;2) и&nbsp;набор из&nbsp;<i>N</i>&nbsp;чисел&nbsp;&#151; значений некоторой величины, полученных в&nbsp;<i>N</i>&nbsp;опытах. Найти среднее значение этой величины. При вычислении среднего значения не&nbsp;учитывать минимальное и&nbsp;максимальное из&nbsp;имеющихся в&nbsp;наборе значений.</p>
+<p class="tsk"><font face="Arial">Minmax22</font>. Дано целое число&nbsp;<i>N</i> (&gt;&nbsp;2) и&nbsp;набор из&nbsp;<i>N</i>&nbsp;чисел. Найти два наименьших элемента из&nbsp;данного набора и&nbsp;вывести эти элементы в&nbsp;порядке возрастания их&nbsp;значений.</p>
+<p class="tsk"><font face="Arial">Minmax23</font>. Дано целое число&nbsp;<i>N</i> (&gt;&nbsp;3) и&nbsp;набор из&nbsp;<i>N</i>&nbsp;чисел. Найти три наибольших элемента из&nbsp;данного набора и&nbsp;вывести эти элементы в&nbsp;порядке убывания их&nbsp;значений.</p>
+<p class="tsk"><font face="Arial">Minmax24</font>. Дано целое число&nbsp;<i>N</i> (&gt;&nbsp;1) и&nbsp;набор из&nbsp;<i>N</i>&nbsp;чисел. Найти максимальную сумму двух соседних чисел из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax25</font>. Дано целое число&nbsp;<i>N</i> (&gt;&nbsp;1) и&nbsp;набор из&nbsp;<i>N</i>&nbsp;чисел. Найти номера двух соседних чисел из&nbsp;данного набора, произведение которых является минимальным, и&nbsp;вывести вначале меньший, а&nbsp;затем больший номер.</p>
+<p class="tsk"><font face="Arial">Minmax26*</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти максимальное количество четных чисел в&nbsp;наборе, идущих подряд. Если четные числа в&nbsp;наборе отсутствуют, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Minmax27</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел, содержащий только нули и&nbsp;единицы. Найти номер элемента, с&nbsp;которого начинается самая длинная последовательность одинаковых чисел, и&nbsp;количество элементов в&nbsp;этой последовательности. Если таких последовательностей несколько, то&nbsp;вывести номер первой из&nbsp;них.</p>
+<p class="tsk"><font face="Arial">Minmax28</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел, содержащий только нули и&nbsp;единицы. Найти номер элемента, с&nbsp;которого начинается самая длинная последовательность единиц, и&nbsp;количество элементов в&nbsp;этой последовательности. Если таких последовательностей несколько, то&nbsp;вывести номер последней из&nbsp;них. Если единицы в&nbsp;исходном наборе отсутствуют, то&nbsp;дважды вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Minmax29</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти максимальное количество подряд идущих минимальных элементов из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Minmax30</font>. Дано целое число&nbsp;<i>N</i> и&nbsp;набор из&nbsp;<i>N</i>&nbsp;целых чисел. Найти минимальное количество подряд идущих максимальных элементов из&nbsp;данного набора.</p>
+<hr noshade><div align=right><font size=-1>Дата генерации страницы: 22.03.2005.</font></div></body></html>

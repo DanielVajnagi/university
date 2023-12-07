@@ -1,0 +1,81 @@
+<!-- Programming Taskbook 4.4 | Copyright (c) M. Abramyan, 1998-2005 -->
+<html><head><meta http-equiv="pragma" content="no-cache"><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Programming Taskbook 4.4 | Логические выражения</title>
+</head><body vlink="#003366" link="#003366"><style>
+H1{font-family:"Arial";font-size:20pt;text-indent:0;margin-top:10; margin-right:10; margin-bottom:0; margin-left:10;}
+H2{font-family:"Arial";font-size:16pt;text-indent:0;margin: 20 10 0 10;}
+H3{font-family:"Arial";font-size:12pt;text-indent:0;margin: 20 10 0 10;}
+P{font-family:"Times New Roman";font-size:12pt;text-indent:0;margin-top:0; margin-right:10; margin-bottom:0; margin-left:10;}
+center{font-family:"Times New Roman";font-size:12pt;}
+TABLE{margin-top:0; margin-bottom:0;}
+TD{font-family:"Times New Roman";font-size:12pt;}
+LI{font-family:"Times New Roman";font-size:12pt;}
+UL{font-family:"Times New Roman";font-size:12pt;}
+P.tsk{text-align:left;text-indent:-50;margin-top:5; margin-left:60;}
+P.hnt{text-align:left;margin-left:60;}
+P.hntc{text-align:left;margin-left:60;}
+P.hntq{text-align:left;margin-left: 60;}
+P.cmt{text-align:left;margin-top:5;}
+P.ttt{text-align:left;}
+P.cnt{text-align:center;}
+P.qte{text-align:left;margin-left:120;margin-top:0;margin-bottom:0;}
+blockquote{font-family:"Times New Roman";text-align:left;margin-left:100;margin-top:0; margin-bottom:0;}
+P.cmtc{text-align:left;}
+P.cmtq{text-align:left;}
+SUB{font-family:"Times New Roman";font-size:8pt;}
+SUP{font-family:"Times New Roman";font-size:8pt;}
+P.foot{text-align:right;font-size:8pt;margin-right:0;}
+</style>
+<script language="javascript" src="back.js">
+</script>
+<font face="Arial" size=+3><b>Programming Taskbook 4</b><br></font>
+<font face="Arial" size=+1>Электронный задачник по программированию</font>
+<div align=right><font size = -1>&copy;&nbsp;&nbsp;М.&nbsp;Э.&nbsp;Абрамян,&nbsp;1998&#150;2005</font></div>
+<hr noshade>
+<div align=center><font size=-1>
+[<a href="index.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/index.htm">Общее&nbsp;описание</a>] [<a href="remarks.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/remarks.htm">Предварительные&nbsp;замечания</a>] [<a href="begin.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/begin.htm">Ввод&nbsp;и&nbsp;вывод&nbsp;данных,&nbsp;оператор&nbsp;присваивания</a>] [<a href="integer.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/integer.htm">Целые&nbsp;числа</a>] [<b>Логические&nbsp;выражения</b>] [<a href="if.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/if.htm">Условный&nbsp;оператор</a>] [<a href="case.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/case.htm">Оператор&nbsp;выбора</a>] [<a href="for.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/for.htm">Цикл&nbsp;с&nbsp;параметром</a>] [<a href="while.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/while.htm">Цикл&nbsp;с&nbsp;условием</a>] [<a href="series.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/series.htm">Последовательности</a>] [<a href="proc.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/proc.htm">Процедуры&nbsp;и&nbsp;функции</a>] [<a href="minmax.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/minmax.htm">Минимумы&nbsp;и&nbsp;максимумы</a>] [<a href="array.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/array.htm">Одномерные&nbsp;массивы</a>] [<a href="matrix.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/matrix.htm">Двумерные&nbsp;массивы&nbsp;(матрицы)</a>] [<a href="string.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/string.htm">Символы&nbsp;и&nbsp;строки</a>] [<a href="file.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/file.htm">Двоичные&nbsp;(типизированные)&nbsp;файлы</a>] [<a href="text.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/text.htm">Текстовые&nbsp;файлы</a>] [<a href="param.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/param.htm">Составные&nbsp;типы&nbsp;данных&nbsp;в&nbsp;процедурах&nbsp;и&nbsp;функциях</a>] [<a href="recur.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/recur.htm">Рекурсия</a>] [<a href="pointer.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/pointer.htm">Указатели&nbsp;и&nbsp;динамические&nbsp;структуры&nbsp;данных</a>] [<a href="demo.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/demo.htm">Задания&nbsp;демо-версии</a>]
+</font></div><hr noshade><div align=right><font size=-1>Стиль: [<a href="booleand.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/booleand.htm">DOS-программа</a>] [<a href="booleanw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/booleanw.htm">Windows-программа</a>] [<b>Книга</b>]</font></div>
+
+<p class="cmt"><h1>Логические&nbsp;выражения</h1></p>
+<p class="cmt">Во&nbsp;всех заданиях данной группы требуется вывести логическое значение True, если приведенное высказывание для предложенных исходных данных является истинным, и&nbsp;значение False в&nbsp;противном случае. Все числа, для&nbsp;которых указано количество цифр (двузначное число, трехзначное число и&nbsp;т.&nbsp;д.), считаются целыми положительными.</p>
+<p class="tsk"><font face="Arial">Boolean1*</font>. Дано целое число&nbsp;<i>A</i>. Проверить истинность высказывания: &#171;Число&nbsp;<i>A</i> является положительным&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean2</font>. Дано целое число&nbsp;<i>A</i>. Проверить истинность высказывания: &#171;Число&nbsp;<i>A</i> является нечетным&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean3</font>. Дано целое число&nbsp;<i>A</i>. Проверить истинность высказывания: &#171;Число&nbsp;<i>A</i> является четным&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean4</font>. Даны два целых числа: <i>A</i>,&nbsp;<i>B</i>. Проверить истинность высказывания: &#171;Справедливы неравенства <i>A</i>&nbsp;&gt;&nbsp;2 и&nbsp;<i>B</i>&nbsp;<font face="Symbol">Ј</font>&nbsp;3&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean5</font>. Даны два целых числа: <i>A</i>,&nbsp;<i>B</i>. Проверить истинность высказывания: &#171;Справедливы неравенства <i>A</i>&nbsp;<font face="Symbol">і</font>&nbsp;0 или&nbsp;<i>B</i>&nbsp;&lt;&nbsp;&#150;2&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean6</font>. Даны три целых числа: <i>A</i>, <i>B</i>,&nbsp;<i>C</i>. Проверить истинность высказывания: &#171;Справедливо двойное неравенство <i>A</i>&nbsp;&lt;&nbsp;<i>B</i>&nbsp;&lt;&nbsp;<i>C</i>&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean7*</font>. Даны три целых числа: <i>A</i>, <i>B</i>,&nbsp;<i>C</i>. Проверить истинность высказывания: &#171;Число&nbsp;<i>B</i> находится между числами&nbsp;<i>A</i> и&nbsp;<i>C</i>&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean8</font>. Даны два целых числа: <i>A</i>,&nbsp;<i>B</i>. Проверить истинность высказывания: &#171;Каждое из&nbsp;чисел&nbsp;<i>A</i> и&nbsp;<i>B</i> нечетное&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean9</font>. Даны два целых числа: <i>A</i>,&nbsp;<i>B</i>. Проверить истинность высказывания: &#171;Хотя&nbsp;бы одно из&nbsp;чисел&nbsp;<i>A</i> и&nbsp;<i>B</i> нечетное&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean10*</font>. Даны два целых числа: <i>A</i>,&nbsp;<i>B</i>. Проверить истинность высказывания: &#171;Ровно одно из&nbsp;чисел&nbsp;<i>A</i> и&nbsp;<i>B</i> нечетное&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean11</font>. Даны два целых числа: <i>A</i>,&nbsp;<i>B</i>. Проверить истинность высказывания: &#171;Числа&nbsp;<i>A</i> и&nbsp;<i>B</i> имеют одинаковую четность&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean12</font>. Даны три целых числа: <i>A</i>, <i>B</i>,&nbsp;<i>C</i>. Проверить истинность высказывания: &#171;Каждое из&nbsp;чисел&nbsp;<i>A</i>, <i>B</i>,&nbsp;<i>C</i> положительное&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean13</font>. Даны три целых числа: <i>A</i>, <i>B</i>,&nbsp;<i>C</i>. Проверить истинность высказывания: &#171;Хотя&nbsp;бы одно из&nbsp;чисел&nbsp;<i>A</i>, <i>B</i>,&nbsp;<i>C</i> положительное&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean14</font>. Даны три целых числа: <i>A</i>, <i>B</i>,&nbsp;<i>C</i>. Проверить истинность высказывания: &#171;Ровно одно из&nbsp;чисел&nbsp;<i>A</i>, <i>B</i>,&nbsp;<i>C</i> положительное&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean15</font>. Даны три целых числа: <i>A</i>, <i>B</i>,&nbsp;<i>C</i>. Проверить истинность высказывания: &#171;Ровно два из&nbsp;чисел&nbsp;<i>A</i>, <i>B</i>,&nbsp;<i>C</i> являются положительными&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean16</font>. Дано целое положительное число. Проверить истинность высказывания: &#171;Данное число является четным двузначным&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean17</font>. Дано целое положительное число. Проверить истинность высказывания: &#171;Данное число является нечетным трехзначным&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean18</font>. Проверить истинность высказывания: &#171;Среди трех данных целых чисел есть хотя&nbsp;бы одна пара совпадающих&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean19</font>. Проверить истинность высказывания: &#171;Среди трех данных целых чисел есть хотя&nbsp;бы одна пара взаимно противоположных&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean20*</font>. Дано трехзначное число. Проверить истинность высказывания: &#171;Все цифры данного числа различны&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean21</font>. Дано трехзначное число. Проверить истинность высказывания: &#171;Цифры данного числа образуют возрастающую последовательность&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean22</font>. Дано трехзначное число. Проверить истинность высказывания: &#171;Цифры данного числа образуют возрастающую или убывающую последовательность&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean23</font>. Дано четырехзначное число. Проверить истинность высказывания: &#171;Данное число читается одинаково слева направо и&nbsp;справа налево&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean24</font>. Даны числа&nbsp;<i>A</i>, <i>B</i>,&nbsp;<i>C</i> (число&nbsp;<i>A</i> не&nbsp;равно&nbsp;0).  Рассмотрев <i>дискриминант</i> <i>D</i>&nbsp;=&nbsp;<i>B</i><sup>2</sup>&nbsp;&#150;&nbsp;4&#183;<i>A</i>&#183;<i>C</i>, проверить истинность высказывания: &#171;Квадратное уравнение <i>A</i>&#183;<i>x</i><sup>2</sup>&nbsp;+&nbsp;<i>B</i>&#183;<i>x</i>&nbsp;+&nbsp;<i>C</i>&nbsp;=&nbsp;0 имеет вещественные корни&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean25</font>. Даны числа&nbsp;<i>x</i>, <i>y</i>. Проверить истинность высказывания: &#171;Точка с координатами (<i>x</i>,&nbsp;<i>y</i>) лежит во&nbsp;второй координатной четверти&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean26</font>. Даны числа&nbsp;<i>x</i>, <i>y</i>. Проверить истинность высказывания: &#171;Точка с координатами (<i>x</i>,&nbsp;<i>y</i>) лежит в&nbsp;четвертой координатной четверти&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean27</font>. Даны числа&nbsp;<i>x</i>, <i>y</i>. Проверить истинность высказывания: &#171;Точка с координатами (<i>x</i>,&nbsp;<i>y</i>) лежит во&nbsp;второй или&nbsp;третьей координатной четверти&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean28</font>. Даны числа&nbsp;<i>x</i>, <i>y</i>. Проверить истинность высказывания: &#171;Точка с координатами (<i>x</i>,&nbsp;<i>y</i>) лежит в&nbsp;первой или&nbsp;третьей координатной четверти&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean29*</font>. Даны числа&nbsp;<i>x</i>, <i>y</i>, <i>x</i><sub>1</sub>,&nbsp;<i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>,&nbsp;<i>y</i><sub>2</sub>. Проверить истинность высказывания: &#171;Точка с&nbsp;координатами (<i>x</i>,&nbsp;<i>y</i>) лежит внутри прямоугольника, левая верхняя вершина которого имеет координаты (<i>x</i><sub>1</sub>,&nbsp;<i>y</i><sub>1</sub>), правая нижняя&nbsp;&#151; (<i>x</i><sub>2</sub>,&nbsp;<i>y</i><sub>2</sub>), а&nbsp;стороны параллельны координатным осям&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean30</font>. Даны целые числа <i>a</i>, <i>b</i>,&nbsp;<i>c</i>, являющиеся сторонами некоторого треугольника. Проверить истинность высказывания: &#171;Треугольник со&nbsp;сторонами <i>a</i>, <i>b</i>,&nbsp;<i>c</i> является равносторонним&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean31</font>. Даны целые числа <i>a</i>, <i>b</i>,&nbsp;<i>c</i>, являющиеся сторонами некоторого треугольника. Проверить истинность высказывания: &#171;Треугольник со&nbsp;сторонами <i>a</i>, <i>b</i>,&nbsp;<i>c</i> является равнобедренным&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean32</font>. Даны целые числа <i>a</i>, <i>b</i>,&nbsp;<i>c</i>, являющиеся сторонами некоторого треугольника. Проверить истинность высказывания: &#171;Треугольник со&nbsp;сторонами <i>a</i>, <i>b</i>,&nbsp;<i>c</i> является прямоугольным&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean33</font>. Даны целые числа <i>a</i>, <i>b</i>,&nbsp;<i>c</i>. Проверить истинность высказывания: &#171;Существует треугольник со&nbsp;сторонами <i>a</i>, <i>b</i>,&nbsp;<i>c</i>&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean34</font>. Даны координаты поля шахматной доски&nbsp;<i>x</i>, <i>y</i> (целые числа, лежащие в&nbsp;диапазоне&nbsp;1&#150;8). Учитывая, что левое нижнее поле доски (1,&nbsp;1) является черным, проверить истинность высказывания: &#171;Данное поле является белым&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean35</font>. Даны координаты двух различных полей шахматной доски&nbsp;<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>,&nbsp;<i>y</i><sub>2</sub> (целые числа, лежащие в&nbsp;диапазоне&nbsp;1&#150;8). Проверить истинность высказывания: &#171;Данные поля имеют одинаковый цвет&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean36</font>. Даны координаты двух различных полей шахматной доски&nbsp;<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>,&nbsp;<i>y</i><sub>2</sub> (целые числа, лежащие в&nbsp;диапазоне&nbsp;1&#150;8). Проверить истинность высказывания: &#171;Ладья за&nbsp;один ход может перейти с&nbsp;одного поля на&nbsp;другое&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean37</font>. Даны координаты двух различных полей шахматной доски&nbsp;<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>,&nbsp;<i>y</i><sub>2</sub> (целые числа, лежащие в&nbsp;диапазоне&nbsp;1&#150;8). Проверить истинность высказывания: &#171;Король&nbsp;за один ход может перейти с&nbsp;одного поля на&nbsp;другое&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean38</font>. Даны координаты двух различных полей шахматной доски&nbsp;<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>,&nbsp;<i>y</i><sub>2</sub> (целые числа, лежащие в&nbsp;диапазоне&nbsp;1&#150;8). Проверить истинность высказывания: &#171;Слон за&nbsp;один ход может перейти с&nbsp;одного поля на&nbsp;другое&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean39</font>. Даны координаты двух различных полей шахматной доски&nbsp;<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>,&nbsp;<i>y</i><sub>2</sub> (целые числа, лежащие в&nbsp;диапазоне&nbsp;1&#150;8). Проверить истинность высказывания: &#171;Ферзь за&nbsp;один ход может перейти с&nbsp;одного поля на&nbsp;другое&#187;.</p>
+<p class="tsk"><font face="Arial">Boolean40</font>. Даны координаты двух различных полей шахматной доски&nbsp;<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>,&nbsp;<i>y</i><sub>2</sub> (целые числа, лежащие в&nbsp;диапазоне&nbsp;1&#150;8). Проверить истинность высказывания: &#171;Конь за&nbsp;один ход может перейти с&nbsp;одного поля на&nbsp;другое&#187;.</p>
+<hr noshade><div align=right><font size=-1>Дата генерации страницы: 22.03.2005.</font></div></body></html>

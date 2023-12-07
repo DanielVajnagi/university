@@ -1,0 +1,82 @@
+<!-- Programming Taskbook 4.4 | Copyright (c) M. Abramyan, 1998-2005 -->
+<html><head><meta http-equiv="pragma" content="no-cache"><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Programming Taskbook 4.4 | Последовательности</title>
+</head><body vlink="#003366" link="#003366"><style>
+H1{font-family:"Arial";font-size:20pt;text-indent:0;margin-top:10; margin-right:10; margin-bottom:0; margin-left:10;}
+H2{font-family:"Arial";font-size:16pt;text-indent:0;margin: 20 10 0 10;}
+H3{font-family:"Arial";font-size:12pt;text-indent:0;margin: 20 10 0 10;}
+P{font-family:"Times New Roman";font-size:12pt;text-indent:0;margin-top:0; margin-right:10; margin-bottom:0; margin-left:10;}
+center{font-family:"Times New Roman";font-size:12pt;}
+TABLE{margin-top:0; margin-bottom:0;}
+TD{font-family:"Times New Roman";font-size:12pt;}
+LI{font-family:"Times New Roman";font-size:12pt;}
+UL{font-family:"Times New Roman";font-size:12pt;}
+P.tsk{text-align:left;text-indent:-50;margin-top:5; margin-left:60;}
+P.hnt{text-align:left;margin-left:60;}
+P.hntc{text-align:left;margin-left:60;}
+P.hntq{text-align:left;margin-left: 60;}
+P.cmt{text-align:left;margin-top:5;}
+P.ttt{text-align:left;}
+P.cnt{text-align:center;}
+P.qte{text-align:left;margin-left:120;margin-top:0;margin-bottom:0;}
+blockquote{font-family:"Times New Roman";text-align:left;margin-left:100;margin-top:0; margin-bottom:0;}
+P.cmtc{text-align:left;}
+P.cmtq{text-align:left;}
+SUB{font-family:"Times New Roman";font-size:8pt;}
+SUP{font-family:"Times New Roman";font-size:8pt;}
+P.foot{text-align:right;font-size:8pt;margin-right:0;}
+</style>
+<script language="javascript" src="back.js">
+</script>
+<font face="Arial" size=+3><b>Programming Taskbook 4</b><br></font>
+<font face="Arial" size=+1>Электронный задачник по программированию</font>
+<div align=right><font size = -1>&copy;&nbsp;&nbsp;М.&nbsp;Э.&nbsp;Абрамян,&nbsp;1998&#150;2005</font></div>
+<hr noshade>
+<div align=center><font size=-1>
+[<a href="indexw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/indexw.htm">Общее&nbsp;описание</a>] [<a href="remarksw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/remarksw.htm">Предварительные&nbsp;замечания</a>] [<a href="beginw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/beginw.htm">Ввод&nbsp;и&nbsp;вывод&nbsp;данных,&nbsp;оператор&nbsp;присваивания</a>] [<a href="integerw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/integerw.htm">Целые&nbsp;числа</a>] [<a href="booleanw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/booleanw.htm">Логические&nbsp;выражения</a>] [<a href="ifw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/ifw.htm">Условный&nbsp;оператор</a>] [<a href="casew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/casew.htm">Оператор&nbsp;выбора</a>] [<a href="forw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/forw.htm">Цикл&nbsp;с&nbsp;параметром</a>] [<a href="whilew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/whilew.htm">Цикл&nbsp;с&nbsp;условием</a>] [<b>Последовательности</b>] [<a href="procw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/procw.htm">Процедуры&nbsp;и&nbsp;функции</a>] [<a href="minmaxw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/minmaxw.htm">Минимумы&nbsp;и&nbsp;максимумы</a>] [<a href="arrayw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/arrayw.htm">Одномерные&nbsp;массивы</a>] [<a href="matrixw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/matrixw.htm">Двумерные&nbsp;массивы&nbsp;(матрицы)</a>] [<a href="stringw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/stringw.htm">Символы&nbsp;и&nbsp;строки</a>] [<a href="filew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/filew.htm">Двоичные&nbsp;(типизированные)&nbsp;файлы</a>] [<a href="textw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/textw.htm">Текстовые&nbsp;файлы</a>] [<a href="paramw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/paramw.htm">Составные&nbsp;типы&nbsp;данных&nbsp;в&nbsp;процедурах&nbsp;и&nbsp;функциях</a>] [<a href="recurw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/recurw.htm">Рекурсия</a>] [<a href="pointerw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/pointerw.htm">Указатели&nbsp;и&nbsp;динамические&nbsp;структуры&nbsp;данных</a>] [<a href="demow.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/demow.htm">Задания&nbsp;демо-версии</a>]
+</font></div><hr noshade><div align=right><font size=-1>Стиль: [<a href="seriesd.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/seriesd.htm">DOS-программа</a>] [<b>Windows-программа</b>] [<a href="series.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/series.htm">Книга</a>]</font></div>
+
+<p class="cmt"><h1>Последовательности</h1></p>
+<p class="cmt">Во&nbsp;всех заданиях данной группы предполагается, что исходный набор содержит ненулевое число элементов (в&nbsp;частности, число&nbsp;N всегда больше нуля). В&nbsp;заданиях на&nbsp;обработку нескольких наборов чисел (Series29&#150;Series40) количество наборов&nbsp;K также всегда является ненулевым.</p>
+<p class="tsk"><font face="Arial">Series1*</font>. Даны десять вещественных чисел. Найти их&nbsp;сумму.</p>
+<p class="tsk"><font face="Arial">Series2</font>. Даны десять вещественных чисел. Найти их&nbsp;произведение.</p>
+<p class="tsk"><font face="Arial">Series3</font>. Даны десять вещественных чисел. Найти их&nbsp;среднее арифметическое.</p>
+<p class="tsk"><font face="Arial">Series4</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел. Вывести сумму и&nbsp;произведение чисел из&nbsp;данного набора.</p>
+<p class="tsk"><font face="Arial">Series5</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;положительных вещественных чисел. Вывести в&nbsp;том же порядке целые части всех чисел из&nbsp;данного набора (как вещественные числа с&nbsp;нулевой дробной частью), а&nbsp;также сумму всех целых частей.</p>
+<p class="tsk"><font face="Arial">Series6</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;положительных вещественных чисел. Вывести в&nbsp;том же порядке дробные части всех чисел из&nbsp;данного набора (как вещественные числа с&nbsp;нулевой целой частью), а&nbsp;также произведение всех дробных частей.</p>
+<p class="tsk"><font face="Arial">Series7</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел. Вывести в&nbsp;том же порядке округленные значения  всех чисел из&nbsp;данного набора (как целые числа), а&nbsp;также сумму всех округленных значений.</p>
+<p class="tsk"><font face="Arial">Series8</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;целых чисел. Вывести в&nbsp;том&nbsp;же порядке все четные числа из&nbsp;данного набора и&nbsp;количество&nbsp;K таких чисел.</p>
+<p class="tsk"><font face="Arial">Series9</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;целых чисел. Вывести в&nbsp;том&nbsp;же порядке номера всех нечетных чисел из&nbsp;данного набора и&nbsp;количество&nbsp;K таких чисел.</p>
+<p class="tsk"><font face="Arial">Series10</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;целых чисел. Если в&nbsp;наборе имеются положительные числа, то&nbsp;вывести True; в&nbsp;противном случае вывести False.</p>
+<p class="tsk"><font face="Arial">Series11</font>. Даны целые числа&nbsp;K,&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;целых чисел. Если в&nbsp;наборе имеются числа, меньшие&nbsp;K, то&nbsp;вывести True; в&nbsp;противном случае вывести False.</p>
+<p class="tsk"><font face="Arial">Series12</font>. Дан набор ненулевых целых чисел; признак его завершения&nbsp;&#151; число&nbsp;0. Вывести количество чисел в&nbsp;наборе.</p>
+<p class="tsk"><font face="Arial">Series13</font>. Дан набор ненулевых целых чисел; признак его завершения&nbsp;&#151; число&nbsp;0. Вывести сумму всех положительных четных чисел из&nbsp;данного набора. Если требуемые числа в&nbsp;наборе отсутствуют, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Series14</font>. Дано целое число&nbsp;K и&nbsp;набор ненулевых целых чисел; признак его завершения&nbsp;&#151; число&nbsp;0. Вывести количество чисел в&nbsp;наборе, меньших&nbsp;K.</p>
+<p class="tsk"><font face="Arial">Series15*</font>. Дано целое число&nbsp;K и&nbsp;набор ненулевых целых чисел; признак его завершения&nbsp;&#151; число&nbsp;0. Вывести номер первого числа в&nbsp;наборе, большего&nbsp;K. Если таких чисел нет, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Series16*</font>. Дано целое число&nbsp;K и&nbsp;набор ненулевых целых чисел; признак его завершения&nbsp;&#151; число&nbsp;0. Вывести номер последнего числа в&nbsp;наборе, большего&nbsp;K. Если таких чисел нет, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Series17*</font>. Дано вещественное число&nbsp;B, целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел, упорядоченных по&nbsp;возрастанию. Вывести элементы набора вместе с&nbsp;числом&nbsp;B, сохраняя упорядоченность выводимых чисел.</p>
+<p class="tsk"><font face="Arial">Series18</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;целых чисел, упорядоченный по&nbsp;возрастанию. Данный набор может содержать одинаковые элементы. Вывести в&nbsp;том&nbsp;же порядке все различные элементы данного набора.</p>
+<p class="tsk"><font face="Arial">Series19*</font>. Дано целое число&nbsp;N (&gt;&nbsp;1) и&nbsp;набор из&nbsp;N&nbsp;целых чисел. Вывести те&nbsp;элементы в&nbsp;наборе, которые меньше своего левого соседа, и&nbsp;количество&nbsp;K таких элементов.</p>
+<p class="tsk"><font face="Arial">Series20</font>. Дано целое число&nbsp;N (&gt;&nbsp;1) и&nbsp;набор из&nbsp;N&nbsp;целых чисел. Вывести те&nbsp;элементы в&nbsp;наборе, которые меньше своего правого соседа, и&nbsp;количество&nbsp;K таких элементов.</p>
+<p class="tsk"><font face="Arial">Series21*</font>. Дано целое число&nbsp;N (&gt;&nbsp;1) и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел. Проверить, образует&nbsp;ли данный набор возрастающую последовательность. Если образует, то&nbsp;вывести True, если нет&nbsp;&#151; вывести False.</p>
+<p class="tsk"><font face="Arial">Series22</font>. Дано целое число&nbsp;N (&gt;&nbsp;1) и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел. Если данный набор образует убывающую последовательность, то&nbsp;вывести&nbsp;0; в&nbsp;противном случае вывести номер первого числа, нарушающего закономерность.</p>
+<p class="tsk"><font face="Arial">Series23</font>. Дано целое число&nbsp;N (&gt;&nbsp;2) и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел. Набор называется <b>пилообразным</b>, если каждый его внутренний элемент либо больше, либо меньше обоих своих соседей (то&nbsp;есть является &#171;зубцом&#187;). Если данный набор является пилообразным, то&nbsp;вывести&nbsp;0; в&nbsp;противном случае вывести номер первого элемента, не&nbsp;являющегося зубцом.</p>
+<p class="tsk"><font face="Arial">Series24</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;целых чисел, содержащий по&nbsp;крайней мере два нуля. Вывести сумму чисел из&nbsp;данного набора, расположенных между последними двумя нулями (если последние нули идут подряд, то&nbsp;вывести&nbsp;0).</p>
+<p class="tsk"><font face="Arial">Series25</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;целых чисел, содержащий по&nbsp;крайней мере два нуля. Вывести сумму чисел из&nbsp;данного набора, расположенных между первым и последним нулем (если первый и последний нули идут подряд, то&nbsp;вывести&nbsp;0).</p>
+<p class="cmt"><h2>Вложенные циклы</h2></p>
+<p class="tsk"><font face="Arial">Series26</font>. Даны целые числа&nbsp;K, N и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел:&nbsp;A<sub>1</sub>, A<sub>2</sub>,&nbsp;&#133;, A<sub>N</sub>. Вывести K-e&nbsp;степени чисел из&nbsp;данного набора: </p><center>(A<sub>1</sub>)<sup>K</sup>, (A<sub>2</sub>)<sup>K</sup>,&nbsp;&#133;, (A<sub>N</sub>)<sup>K</sup>.</center>
+<p class="tsk"><font face="Arial">Series27</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел:&nbsp;A<sub>1</sub>, A<sub>2</sub>,&nbsp;&#133;, A<sub>N</sub>. Вывести следующие числа:</p><center>A<sub>1</sub>, (A<sub>2</sub>)<sup>2</sup>,&nbsp;&#133;, (A<sub>N&#150;1</sub>)<sup>N&#150;1</sup>, (A<sub>N</sub>)<sup>N</sup>.</center>
+<p class="tsk"><font face="Arial">Series28</font>. Дано целое число&nbsp;N и&nbsp;набор из&nbsp;N&nbsp;вещественных чисел:&nbsp;A<sub>1</sub>, A<sub>2</sub>,&nbsp;&#133;, A<sub>N</sub>. Вывести следующие числа:</p><center>(A<sub>1</sub>)<sup>N</sup>, (A<sub>2</sub>)<sup>N&#150;1</sup>,&nbsp;&#133;, (A<sub>N&#150;1</sub>)<sup>2</sup>, A<sub>N</sub>.</center>
+<p class="tsk"><font face="Arial">Series29</font>. Даны целые числа&nbsp;K, N, а&nbsp;также K&nbsp;наборов целых чисел по&nbsp;N&nbsp;элементов в&nbsp;каждом наборе. Вывести общую сумму всех элементов, входящих в&nbsp;данные наборы.</p>
+<p class="tsk"><font face="Arial">Series30</font>. Даны целые числа&nbsp;K, N, а&nbsp;также K&nbsp;наборов целых чисел по&nbsp;N&nbsp;элементов в&nbsp;каждом наборе. Для каждого набора вывести сумму его элементов.</p>
+<p class="tsk"><font face="Arial">Series31</font>. Даны целые числа&nbsp;K, N, а&nbsp;также K&nbsp;наборов целых чисел по&nbsp;N&nbsp;элементов в&nbsp;каждом наборе. Найти количество наборов, содержащих число&nbsp;2. Если таких наборов нет, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Series32</font>. Даны целые числа&nbsp;K, N, а&nbsp;также K&nbsp;наборов целых чисел по&nbsp;N&nbsp;элементов в&nbsp;каждом наборе. Для каждого набора вывести номер его первого элемента, равного&nbsp;2, или число&nbsp;0, если в&nbsp;данном наборе нет двоек.</p>
+<p class="tsk"><font face="Arial">Series33</font>. Даны целые числа&nbsp;K, N, а&nbsp;также K&nbsp;наборов целых чисел по&nbsp;N&nbsp;элементов в&nbsp;каждом наборе. Для каждого набора вывести номер его последнего элемента, равного&nbsp;2, или число&nbsp;0, если в&nbsp;данном наборе нет двоек.</p>
+<p class="tsk"><font face="Arial">Series34</font>. Даны целые числа&nbsp;K, N, а&nbsp;также K&nbsp;наборов целых чисел по&nbsp;N&nbsp;элементов в&nbsp;каждом наборе. Для каждого набора выполнить следующее действие: если в&nbsp;наборе содержится число&nbsp;2, то&nbsp;вывести сумму его элементов; если в&nbsp;наборе нет двоек, то&nbsp;вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Series35</font>. Дано целое число&nbsp;K, а&nbsp;также K&nbsp;наборов ненулевых целых чисел. Признаком завершения каждого набора является число&nbsp;0. Для каждого набора вывести количество его элементов. Вывести также общее количество элементов во&nbsp;всех наборах.</p>
+<p class="tsk"><font face="Arial">Series36</font>. Дано целое число&nbsp;K, а также&nbsp;K наборов ненулевых целых чисел. Каждый набор содержит не менее двух элементов, признаком его завершения является число&nbsp;0. Найти количество наборов, элементы которых возрастают.</p>
+<p class="tsk"><font face="Arial">Series37</font>. Дано целое число&nbsp;K, а также&nbsp;K наборов ненулевых целых чисел. Каждый набор содержит не менее двух элементов, признаком его завершения является число&nbsp;0. Найти количество наборов, элементы которых возрастают или убывают.</p>
+<p class="tsk"><font face="Arial">Series38</font>. Дано целое число&nbsp;K, а также&nbsp;K наборов ненулевых целых чисел. Каждый набор содержит не менее двух элементов, признаком его завершения является число&nbsp;0. Для каждого набора выполнить следующее действие: если элементы набора возрастают, то&nbsp;вывести&nbsp;1; если элементы набора убывают, то вывести&nbsp;&#150;1; если элементы набора не&nbsp;возрастают и&nbsp;не&nbsp;убывают, то вывести&nbsp;0.</p>
+<p class="tsk"><font face="Arial">Series39</font>. Дано целое число&nbsp;K, а также&nbsp;K наборов ненулевых целых чисел. Каждый набор содержит не менее трех элементов, признаком его завершения является число&nbsp;0. Найти количество пилообразных наборов (определение пилообразного набора дано в&nbsp;задании Series23).</p>
+<p class="tsk"><font face="Arial">Series40</font>. Дано целое число&nbsp;K, а также&nbsp;K наборов ненулевых целых чисел. Каждый набор содержит не менее трех элементов, признаком его завершения является число&nbsp;0. Для каждого набора выполнить следующее действие: если набор является пилообразным (см.&nbsp;задание Series23), то&nbsp;вывести количество его&nbsp;элементов; в&nbsp;противном случае вывести номер первого элемента, который не&nbsp;является зубцом.</p>
+<hr noshade><div align=right><font size=-1>Дата генерации страницы: 22.03.2005.</font></div></body></html>

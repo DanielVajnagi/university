@@ -1,0 +1,71 @@
+<!-- Programming Taskbook 4.4 | Copyright (c) M. Abramyan, 1998-2005 -->
+<html><head><meta http-equiv="pragma" content="no-cache"><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Programming Taskbook 4.4 | Целые числа</title>
+</head><body vlink="#003366" link="#003366"><style>
+H1{font-family:"Arial";font-size:20pt;text-indent:0;margin-top:10; margin-right:10; margin-bottom:0; margin-left:10;}
+H2{font-family:"Arial";font-size:16pt;text-indent:0;margin: 20 10 0 10;}
+H3{font-family:"Arial";font-size:12pt;text-indent:0;margin: 20 10 0 10;}
+P{font-family:"Times New Roman";font-size:12pt;text-indent:0;margin-top:0; margin-right:10; margin-bottom:0; margin-left:10;}
+center{font-family:"Times New Roman";font-size:12pt;}
+TABLE{margin-top:0; margin-bottom:0;}
+TD{font-family:"Times New Roman";font-size:12pt;}
+LI{font-family:"Times New Roman";font-size:12pt;}
+UL{font-family:"Times New Roman";font-size:12pt;}
+P.tsk{text-align:left;text-indent:-50;margin-top:5; margin-left:60;}
+P.hnt{text-align:left;margin-left:60;}
+P.hntc{text-align:left;margin-left:60;}
+P.hntq{text-align:left;margin-left: 60;}
+P.cmt{text-align:left;margin-top:5;}
+P.ttt{text-align:left;}
+P.cnt{text-align:center;}
+P.qte{text-align:left;margin-left:120;margin-top:0;margin-bottom:0;}
+blockquote{font-family:"Times New Roman";text-align:left;margin-left:100;margin-top:0; margin-bottom:0;}
+P.cmtc{text-align:left;}
+P.cmtq{text-align:left;}
+SUB{font-family:"Times New Roman";font-size:8pt;}
+SUP{font-family:"Times New Roman";font-size:8pt;}
+P.foot{text-align:right;font-size:8pt;margin-right:0;}
+</style>
+<script language="javascript" src="back.js">
+</script>
+<font face="Arial" size=+3><b>Programming Taskbook 4</b><br></font>
+<font face="Arial" size=+1>Электронный задачник по программированию</font>
+<div align=right><font size = -1>&copy;&nbsp;&nbsp;М.&nbsp;Э.&nbsp;Абрамян,&nbsp;1998&#150;2005</font></div>
+<hr noshade>
+<div align=center><font size=-1>
+[<a href="indexw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/indexw.htm">Общее&nbsp;описание</a>] [<a href="remarksw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/remarksw.htm">Предварительные&nbsp;замечания</a>] [<a href="beginw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/beginw.htm">Ввод&nbsp;и&nbsp;вывод&nbsp;данных,&nbsp;оператор&nbsp;присваивания</a>] [<b>Целые&nbsp;числа</b>] [<a href="booleanw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/booleanw.htm">Логические&nbsp;выражения</a>] [<a href="ifw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/ifw.htm">Условный&nbsp;оператор</a>] [<a href="casew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/casew.htm">Оператор&nbsp;выбора</a>] [<a href="forw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/forw.htm">Цикл&nbsp;с&nbsp;параметром</a>] [<a href="whilew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/whilew.htm">Цикл&nbsp;с&nbsp;условием</a>] [<a href="seriesw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/seriesw.htm">Последовательности</a>] [<a href="procw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/procw.htm">Процедуры&nbsp;и&nbsp;функции</a>] [<a href="minmaxw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/minmaxw.htm">Минимумы&nbsp;и&nbsp;максимумы</a>] [<a href="arrayw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/arrayw.htm">Одномерные&nbsp;массивы</a>] [<a href="matrixw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/matrixw.htm">Двумерные&nbsp;массивы&nbsp;(матрицы)</a>] [<a href="stringw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/stringw.htm">Символы&nbsp;и&nbsp;строки</a>] [<a href="filew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/filew.htm">Двоичные&nbsp;(типизированные)&nbsp;файлы</a>] [<a href="textw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/textw.htm">Текстовые&nbsp;файлы</a>] [<a href="paramw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/paramw.htm">Составные&nbsp;типы&nbsp;данных&nbsp;в&nbsp;процедурах&nbsp;и&nbsp;функциях</a>] [<a href="recurw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/recurw.htm">Рекурсия</a>] [<a href="pointerw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/pointerw.htm">Указатели&nbsp;и&nbsp;динамические&nbsp;структуры&nbsp;данных</a>] [<a href="demow.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/demow.htm">Задания&nbsp;демо-версии</a>]
+</font></div><hr noshade><div align=right><font size=-1>Стиль: [<a href="integerd.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/integerd.htm">DOS-программа</a>] [<b>Windows-программа</b>] [<a href="integer.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/integer.htm">Книга</a>]</font></div>
+
+<p class="cmt"><h1>Целые&nbsp;числа</h1></p>
+<p class="cmt">Все входные и&nbsp;выходные данные в&nbsp;заданиях этой группы являются целыми числами. Все числа, для&nbsp;которых указано количество цифр (двузначное число, трехзначное число и&nbsp;т.&nbsp;д.), считаются положительными.</p>
+<p class="tsk"><font face="Arial">Integer1</font>. Дано расстояние&nbsp;L в&nbsp;сантиметрах. Используя операцию деления нацело, найти количество полных метров в&nbsp;нем (1&nbsp;метр&nbsp;=&nbsp;100&nbsp;см).</p>
+<p class="tsk"><font face="Arial">Integer2</font>. Дана масса&nbsp;M в&nbsp;килограммах. Используя операцию деления нацело, найти количество полных тонн в&nbsp;ней (1&nbsp;тонна&nbsp;=&nbsp;1000&nbsp;кг).</p>
+<p class="tsk"><font face="Arial">Integer3*</font>. Дан размер файла в байтах. Используя операцию деления нацело, найти количество полных килобайтов, которые занимает данный файл (1&nbsp;килобайт&nbsp;=&nbsp;1024&nbsp;байта).</p>
+<p class="tsk"><font face="Arial">Integer4</font>. Даны целые положительные числа&nbsp;A и&nbsp;B (A&nbsp;&gt;&nbsp;B). На&nbsp;отрезке длины&nbsp;A размещено максимально возможное количество отрезков длины&nbsp;B (без&nbsp;наложений). Используя операцию деления нацело, найти количество отрезков&nbsp;B, размещенных на&nbsp;отрезке&nbsp;A.</p>
+<p class="tsk"><font face="Arial">Integer5</font>. Даны целые положительные числа&nbsp;A и&nbsp;B (A&nbsp;&gt;&nbsp;B). На&nbsp;отрезке длины&nbsp;A размещено максимально возможное количество отрезков длины&nbsp;B (без&nbsp;наложений). Используя операцию взятия остатка от&nbsp;деления нацело, найти длину незанятой части отрезка&nbsp;A.</p>
+<p class="tsk"><font face="Arial">Integer6</font>. Дано двузначное число. Вывести вначале его левую цифру (десятки), а&nbsp;затем&nbsp;&#151; его правую цифру (единицы). Для&nbsp;нахождения десятков использовать операцию деления нацело, для&nbsp;нахождения единиц&nbsp;&#151; операцию взятия остатка от&nbsp;деления.</p>
+<p class="tsk"><font face="Arial">Integer7</font>. Дано двузначное число. Найти сумму и&nbsp;произведение его цифр.</p>
+<p class="tsk"><font face="Arial">Integer8*</font>. Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа.</p>
+<p class="tsk"><font face="Arial">Integer9</font>. Дано трехзначное число. Используя одну операцию деления нацело, вывести первую цифру данного числа (сотни).</p>
+<p class="tsk"><font face="Arial">Integer10</font>. Дано трехзначное число. Вывести вначале его последнюю цифру (единицы), а&nbsp;затем&nbsp;&#151; его среднюю цифру (десятки).</p>
+<p class="tsk"><font face="Arial">Integer11*</font>. Дано трехзначное число. Найти сумму и&nbsp;произведение его цифр.</p>
+<p class="tsk"><font face="Arial">Integer12</font>. Дано трехзначное число. Вывести число, полученное при прочтении исходного числа справа налево.</p>
+<p class="tsk"><font face="Arial">Integer13</font>. Дано трехзначное число. В&nbsp;нем зачеркнули первую слева цифру и&nbsp;приписали ее справа. Вывести полученное число.</p>
+<p class="tsk"><font face="Arial">Integer14</font>. Дано трехзначное число. В&nbsp;нем зачеркнули первую справа цифру и&nbsp;приписали ее слева. Вывести полученное число.</p>
+<p class="tsk"><font face="Arial">Integer15</font>. Дано трехзначное число. Вывести число, полученное при перестановке цифр сотен и&nbsp;десятков исходного числа (например, 123 перейдет в&nbsp;213).</p>
+<p class="tsk"><font face="Arial">Integer16</font>. Дано трехзначное число. Вывести число, полученное при перестановке цифр десятков и&nbsp;единиц исходного числа (например, 123 перейдет в&nbsp;132).</p>
+<p class="tsk"><font face="Arial">Integer17</font>. Дано целое число, большее 999. Используя одну операцию деления нацело и&nbsp;одну операцию взятия остатка от деления, найти цифру, соответствующую разряду сотен в&nbsp;записи этого числа.</p>
+<p class="tsk"><font face="Arial">Integer18</font>. Дано целое число, большее 999. Используя одну операцию деления нацело и&nbsp;одну операцию взятия остатка от деления, найти цифру, соответствующую разряду тысяч в&nbsp;записи этого числа.</p>
+<p class="tsk"><font face="Arial">Integer19</font>. С&nbsp;начала суток прошло N&nbsp;секунд (N&nbsp;&#151; целое). Найти количество полных минут, прошедших с&nbsp;начала суток.</p>
+<p class="tsk"><font face="Arial">Integer20*</font>. С&nbsp;начала суток прошло N&nbsp;секунд (N&nbsp;&#151; целое). Найти количество полных часов, прошедших с&nbsp;начала суток.</p>
+<p class="tsk"><font face="Arial">Integer21</font>. С&nbsp;начала суток прошло N&nbsp;секунд (N&nbsp;&#151; целое). Найти количество секунд, прошедших с&nbsp;начала последней минуты.</p>
+<p class="tsk"><font face="Arial">Integer22</font>. С&nbsp;начала суток прошло N&nbsp;секунд (N&nbsp;&#151; целое). Найти количество секунд, прошедших с&nbsp;начала последнего часа.</p>
+<p class="tsk"><font face="Arial">Integer23</font>. С&nbsp;начала суток прошло N&nbsp;секунд (N&nbsp;&#151; целое). Найти количество полных минут, прошедших с&nbsp;начала последнего часа.</p>
+<p class="tsk"><font face="Arial">Integer24</font>. Дни недели пронумерованы следующим образом: 0&nbsp;&#151; воскресенье, 1&nbsp;&#151; понедельник, 2&nbsp;&#151; вторник,&nbsp;&#133;&nbsp;, 6&nbsp;&#151; суббота. Дано целое число&nbsp;K, лежащее в&nbsp;диапазоне 1&#150;365. Определить номер дня недели для K-го дня года, если известно, что в&nbsp;этом году 1&nbsp;января было понедельником.</p>
+<p class="tsk"><font face="Arial">Integer25</font>. Дни недели пронумерованы следующим образом: 0&nbsp;&#151; воскресенье, 1&nbsp;&#151; понедельник, 2&nbsp;&#151; вторник,&nbsp;&#133;&nbsp;, 6&nbsp;&#151; суббота. Дано целое число&nbsp;K, лежащее в&nbsp;диапазоне 1&#150;365. Определить номер дня недели для K-го дня года, если известно, что в&nbsp;этом году 1&nbsp;января было четвергом.</p>
+<p class="tsk"><font face="Arial">Integer26</font>. Дни недели пронумерованы следующим образом: 1&nbsp;&#151; понедельник, 2&nbsp;&#151; вторник,&nbsp;&#133;&nbsp;, 6&nbsp;&#151; суббота, 7&nbsp;&#151; воскресенье. Дано целое число&nbsp;K, лежащее в&nbsp;диапазоне 1&#150;365. Определить номер дня недели для K-го дня года, если известно, что в&nbsp;этом году 1&nbsp;января было вторником.</p>
+<p class="tsk"><font face="Arial">Integer27</font>. Дни недели пронумерованы следующим образом: 1&nbsp;&#151; понедельник, 2&nbsp;&#151; вторник,&nbsp;&#133;&nbsp;, 6&nbsp;&#151; суббота, 7&nbsp;&#151; воскресенье. Дано целое число&nbsp;K, лежащее в&nbsp;диапазоне 1&#150;365. Определить номер дня недели для K-го дня года, если известно, что в&nbsp;этом году 1&nbsp;января было субботой.</p>
+<p class="tsk"><font face="Arial">Integer28</font>. Дни недели пронумерованы следующим образом: 1&nbsp;&#151; понедельник, 2&nbsp;&#151; вторник,&nbsp;&#133;&nbsp;, 6&nbsp;&#151; суббота, 7&nbsp;&#151; воскресенье. Дано целое число&nbsp;K, лежащее в&nbsp;диапазоне 1&#150;365, и&nbsp;целое число&nbsp;N, лежащее в&nbsp;диапазоне 1&#150;7. Определить номер дня недели для K-го дня года, если известно, что в&nbsp;этом году 1&nbsp;января было днем недели с&nbsp;номером&nbsp;N.</p>
+<p class="tsk"><font face="Arial">Integer29*</font>. Даны целые положительные числа&nbsp;A, B,&nbsp;C. На&nbsp;прямоугольнике размера&nbsp;A&nbsp;<font face="Symbol">ґ</font>&nbsp;B размещено максимально возможное количество квадратов со&nbsp;стороной&nbsp;C (без&nbsp;наложений). Найти количество квадратов, размещенных на&nbsp;прямоугольнике, а&nbsp;также площадь незанятой части прямоугольника.</p>
+<p class="tsk"><font face="Arial">Integer30*</font>. Дан номер некоторого года (целое положительное число). Определить соответствующий ему номер столетия, учитывая, что, к&nbsp;примеру, началом 20&nbsp;столетия был 1901&nbsp;год.</p>
+<hr noshade><div align=right><font size=-1>Дата генерации страницы: 22.03.2005.</font></div></body></html>

@@ -1,0 +1,70 @@
+<!-- Programming Taskbook 4.4 | Copyright (c) M. Abramyan, 1998-2005 -->
+<html><head><meta http-equiv="pragma" content="no-cache"><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Programming Taskbook 4.4 | Условный оператор</title>
+</head><body vlink="#003366" link="#003366"><style>
+H1{font-family:"Arial";font-size:20pt;text-indent:0;margin-top:10; margin-right:10; margin-bottom:0; margin-left:10;}
+H2{font-family:"Arial";font-size:16pt;text-indent:0;margin: 20 10 0 10;}
+H3{font-family:"Arial";font-size:12pt;text-indent:0;margin: 20 10 0 10;}
+P{font-family:"Times New Roman";font-size:12pt;text-indent:0;margin-top:0; margin-right:10; margin-bottom:0; margin-left:10;}
+center{font-family:"Times New Roman";font-size:12pt;}
+TABLE{margin-top:0; margin-bottom:0;}
+TD{font-family:"Times New Roman";font-size:12pt;}
+LI{font-family:"Times New Roman";font-size:12pt;}
+UL{font-family:"Times New Roman";font-size:12pt;}
+P.tsk{text-align:left;text-indent:-50;margin-top:5; margin-left:60;}
+P.hnt{text-align:left;margin-left:60;}
+P.hntc{text-align:left;margin-left:60;}
+P.hntq{text-align:left;margin-left: 60;}
+P.cmt{text-align:left;margin-top:5;}
+P.ttt{text-align:left;}
+P.cnt{text-align:center;}
+P.qte{text-align:left;margin-left:120;margin-top:0;margin-bottom:0;}
+blockquote{font-family:"Times New Roman";text-align:left;margin-left:100;margin-top:0; margin-bottom:0;}
+P.cmtc{text-align:left;}
+P.cmtq{text-align:left;}
+SUB{font-family:"Times New Roman";font-size:8pt;}
+SUP{font-family:"Times New Roman";font-size:8pt;}
+P.foot{text-align:right;font-size:8pt;margin-right:0;}
+</style>
+<script language="javascript" src="back.js">
+</script>
+<font face="Arial" size=+3><b>Programming Taskbook 4</b><br></font>
+<font face="Arial" size=+1>Электронный задачник по программированию</font>
+<div align=right><font size = -1>&copy;&nbsp;&nbsp;М.&nbsp;Э.&nbsp;Абрамян,&nbsp;1998&#150;2005</font></div>
+<hr noshade>
+<div align=center><font size=-1>
+[<a href="indexw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/indexw.htm">Общее&nbsp;описание</a>] [<a href="remarksw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/remarksw.htm">Предварительные&nbsp;замечания</a>] [<a href="beginw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/beginw.htm">Ввод&nbsp;и&nbsp;вывод&nbsp;данных,&nbsp;оператор&nbsp;присваивания</a>] [<a href="integerw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/integerw.htm">Целые&nbsp;числа</a>] [<a href="booleanw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/booleanw.htm">Логические&nbsp;выражения</a>] [<b>Условный&nbsp;оператор</b>] [<a href="casew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/casew.htm">Оператор&nbsp;выбора</a>] [<a href="forw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/forw.htm">Цикл&nbsp;с&nbsp;параметром</a>] [<a href="whilew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/whilew.htm">Цикл&nbsp;с&nbsp;условием</a>] [<a href="seriesw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/seriesw.htm">Последовательности</a>] [<a href="procw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/procw.htm">Процедуры&nbsp;и&nbsp;функции</a>] [<a href="minmaxw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/minmaxw.htm">Минимумы&nbsp;и&nbsp;максимумы</a>] [<a href="arrayw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/arrayw.htm">Одномерные&nbsp;массивы</a>] [<a href="matrixw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/matrixw.htm">Двумерные&nbsp;массивы&nbsp;(матрицы)</a>] [<a href="stringw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/stringw.htm">Символы&nbsp;и&nbsp;строки</a>] [<a href="filew.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/filew.htm">Двоичные&nbsp;(типизированные)&nbsp;файлы</a>] [<a href="textw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/textw.htm">Текстовые&nbsp;файлы</a>] [<a href="paramw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/paramw.htm">Составные&nbsp;типы&nbsp;данных&nbsp;в&nbsp;процедурах&nbsp;и&nbsp;функциях</a>] [<a href="recurw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/recurw.htm">Рекурсия</a>] [<a href="pointerw.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/pointerw.htm">Указатели&nbsp;и&nbsp;динамические&nbsp;структуры&nbsp;данных</a>] [<a href="demow.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/demow.htm">Задания&nbsp;демо-версии</a>]
+</font></div><hr noshade><div align=right><font size=-1>Стиль: [<a href="ifd.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/ifd.htm">DOS-программа</a>] [<b>Windows-программа</b>] [<a href="if.htm" tppabs="http://sunschool.math.rsu.ru/taskbook/if.htm">Книга</a>]</font></div>
+
+<p class="cmt"><h1>Условный&nbsp;оператор</h1></p>
+<p class="tsk"><font face="Arial">If1</font>. Дано целое число. Если оно является положительным, то&nbsp;прибавить к&nbsp;нему&nbsp;1; в&nbsp;противном случае не&nbsp;изменять&nbsp;его. Вывести полученное число.</p>
+<p class="tsk"><font face="Arial">If2</font>. Дано целое число. Если оно является положительным, то прибавить к нему&nbsp;1; в&nbsp;противном случае вычесть из&nbsp;него&nbsp;2. Вывести полученное число.</p>
+<p class="tsk"><font face="Arial">If3</font>. Дано целое число. Если оно является положительным, то прибавить к нему&nbsp;1; если отрицательным, то вычесть из&nbsp;него&nbsp;2; если нулевым, то&nbsp;заменить его на&nbsp;10. Вывести полученное число.</p>
+<p class="tsk"><font face="Arial">If4*</font>. Даны три целых числа. Найти количество положительных чисел в&nbsp;исходном наборе.</p>
+<p class="tsk"><font face="Arial">If5</font>. Даны три целых числа. Найти количество положительных и&nbsp;количество отрицательных чисел в&nbsp;исходном наборе.</p>
+<p class="tsk"><font face="Arial">If6*</font>. Даны два числа. Вывести большее из&nbsp;них.</p>
+<p class="tsk"><font face="Arial">If7</font>. Даны два числа. Вывести порядковый номер меньшего из&nbsp;них.</p>
+<p class="tsk"><font face="Arial">If8*</font>. Даны два числа. Вывести вначале большее, а&nbsp;затем меньшее из&nbsp;них.</p>
+<p class="tsk"><font face="Arial">If9</font>. Даны две переменные вещественного типа:&nbsp;A,&nbsp;B. Перераспределить значения данных переменных так, чтобы в&nbsp;A оказалось меньшее из&nbsp;значений, а&nbsp;в&nbsp;B&nbsp;&#151; большее. Вывести новые значения переменных&nbsp;A и&nbsp;B.</p>
+<p class="tsk"><font face="Arial">If10</font>. Даны две переменные целого типа:&nbsp;A и&nbsp;B. Если их&nbsp;значения не&nbsp;равны, то&nbsp;присвоить каждой переменной сумму этих значений, а&nbsp;если равны, то&nbsp;присвоить переменным нулевые значения. Вывести новые значения переменных&nbsp;A и&nbsp;B.</p>
+<p class="tsk"><font face="Arial">If11</font>. Даны две переменные целого типа:&nbsp;A и&nbsp;B. Если их&nbsp;значения не&nbsp;равны, то&nbsp;присвоить каждой переменной большее из&nbsp;этих значений, а&nbsp;если равны, то&nbsp;присвоить переменным нулевые значения. Вывести новые значения переменных&nbsp;A и&nbsp;B.</p>
+<p class="tsk"><font face="Arial">If12*</font>. Даны три числа. Найти наименьшее из&nbsp;них.</p>
+<p class="tsk"><font face="Arial">If13</font>. Даны три числа. Найти среднее из&nbsp;них (то&nbsp;есть число, расположенное между наименьшим и&nbsp;наибольшим).</p>
+<p class="tsk"><font face="Arial">If14</font>. Даны три числа. Вывести вначале наименьшее, а&nbsp;затем наибольшее из&nbsp;данных чисел.</p>
+<p class="tsk"><font face="Arial">If15</font>. Даны три числа. Найти сумму двух наибольших из&nbsp;них.</p>
+<p class="tsk"><font face="Arial">If16</font>. Даны три переменные вещественного типа:&nbsp;A, B,&nbsp;C. Если их&nbsp;значения упорядочены по&nbsp;возрастанию, то&nbsp;удвоить&nbsp;их; в&nbsp;противном случае заменить значение каждой переменной на&nbsp;противоположное. Вывести новые значения переменных&nbsp;A, B,&nbsp;C.</p>
+<p class="tsk"><font face="Arial">If17</font>. Даны три переменные вещественного типа:&nbsp;A, B,&nbsp;C. Если их&nbsp;значения упорядочены по&nbsp;возрастанию или&nbsp;убыванию, то&nbsp;удвоить&nbsp;их; в&nbsp;противном случае заменить значение каждой переменной на&nbsp;противоположное. Вывести новые значения переменных&nbsp;A, B,&nbsp;C.</p>
+<p class="tsk"><font face="Arial">If18</font>. Даны три целых числа, одно из&nbsp;которых отлично от&nbsp;двух других, равных между собой. Определить порядковый номер числа, отличного от&nbsp;остальных.</p>
+<p class="tsk"><font face="Arial">If19</font>. Даны четыре целых числа, одно из&nbsp;которых отлично от&nbsp;трех других, равных между собой. Определить порядковый номер числа, отличного от&nbsp;остальных.</p>
+<p class="tsk"><font face="Arial">If20</font>. На&nbsp;числовой оси расположены три точки:&nbsp;A, B,&nbsp;C. Определить, какая из&nbsp;двух последних точек (B или&nbsp;C) расположена ближе к&nbsp;A, и&nbsp;вывести эту точку и&nbsp;ее расстояние от&nbsp;точки&nbsp;A.</p>
+<p class="tsk"><font face="Arial">If21</font>. Даны целочисленные координаты точки на&nbsp;плоскости. Если точка совпадает с&nbsp;началом координат, то&nbsp;вывести&nbsp;0. Если точка не&nbsp;совпадает с&nbsp;началом координат, но&nbsp;лежит на&nbsp;оси&nbsp;OX или&nbsp;OY, то&nbsp;вывести соответственно&nbsp;1 или&nbsp;2. Если точка не&nbsp;лежит на координатных осях, то&nbsp;вывести&nbsp;3.</p>
+<p class="tsk"><font face="Arial">If22*</font>. Даны координаты точки, не&nbsp;лежащей на&nbsp;координатных осях&nbsp;OX и&nbsp;OY. Определить номер координатной четверти, в&nbsp;которой находится данная точка.</p>
+<p class="tsk"><font face="Arial">If23</font>. Даны целочисленные координаты трех вершин прямоугольника, стороны которого параллельны координатным осям. Найти координаты его четвертой вершины.</p>
+<p class="tsk"><font face="Arial">If24</font>. Для данного вещественного&nbsp;x найти значение следующей функции&nbsp;f, принимающей вещественные значения: </p><center><table><tr><td align=right>f(x)<td align=center>&nbsp;=&nbsp;<td align=right>2&#183;sin(x),<td align=left>если x&nbsp;&gt;&nbsp;0,         <tr><td align=right>&nbsp;<td align=center>&nbsp;<td align=right>6&nbsp;&#150;&nbsp;x,<td align=left>если x&nbsp;<font face="Symbol">Ј</font>&nbsp;0.</table></center>
+<p class="tsk"><font face="Arial">If25</font>. Для данного целого&nbsp;x найти значение следующей функции&nbsp;f, принимающей значения целого типа: </p><center><table><tr><td align=right>f(x)<td align=center>&nbsp;=&nbsp;<td align=right>2&#183;x,<td align=left>если x&nbsp;&lt;&nbsp;&#150;2 или x&nbsp;&gt;&nbsp;2, <tr><td align=right>&nbsp;<td align=center>&nbsp;<td align=right>&#150;3&#183;x,<td align=left>в противном случае.</table></center>
+<p class="tsk"><font face="Arial">If26*</font>. Для данного вещественного&nbsp;x найти значение следующей функции&nbsp;f, принимающей вещественные значения: </p><center><table><tr><td align=right>&nbsp;<td align=center>&nbsp;<td align=right>&#150;x,<td align=left>если x&nbsp;<font face="Symbol">Ј</font>&nbsp;0, <tr><td align=right>f(x)<td align=center>&nbsp;=&nbsp;<td align=right>x<sup>2</sup>,<td align=left>если 0&nbsp;&lt;&nbsp;x&nbsp;&lt;&nbsp;2, <tr><td align=right>&nbsp;<td align=center>&nbsp;<td align=right>4,<td align=left>если x&nbsp;<font face="Symbol">і</font>&nbsp;2.</table></center>
+<p class="tsk"><font face="Arial">If27</font>. Для данного вещественного&nbsp;x найти значение следующей функции&nbsp;f, принимающей значения целого типа: </p><center><table><tr><td align=right>&nbsp;<td align=center>&nbsp;<td align=right>0,<td align=left>если x&nbsp;&lt;&nbsp;0, <tr><td align=right>f(x)<td align=center>&nbsp;=&nbsp;<td align=right>1,<td align=left>если x принадлежит [0,&nbsp;1), [2,&nbsp;3),&nbsp;&#133; , <tr><td align=right>&nbsp;<td align=center>&nbsp;<td align=right>&#150;1,<td align=left>если x принадлежит [1,&nbsp;2), [3,&nbsp;4),&nbsp;&#133; .</table></center>
+<p class="tsk"><font face="Arial">If28</font>. Дан номер года (положительное целое число). Определить количество дней в&nbsp;этом году, учитывая, что обычный год насчитывает 365&nbsp;дней, а високосный&nbsp;&#151; 366&nbsp;дней. Високосным считается год, делящийся на&nbsp;4, за&nbsp;исключением тех годов, которые делятся на&nbsp;100 и не&nbsp;делятся на&nbsp;400 (например, годы&nbsp;300, 1300 и&nbsp;1900 не&nbsp;являются високосными, а&nbsp;1200 и&nbsp;2000&nbsp;&#151; являются).</p>
+<p class="tsk"><font face="Arial">If29</font>. Дано целое число. Вывести его строку-описание вида &#171;отрицательное четное число&#187;, &#171;нулевое число&#187;, &#171;положительное нечетное число&#187; и&nbsp;т.&nbsp;д.</p>
+<p class="tsk"><font face="Arial">If30</font>. Дано целое число, лежащее в диапазоне 1&#150;999. Вывести его строку-описание вида &#171;четное двузначное число&#187;, &#171;нечетное трехзначное число&#187; и&nbsp;т.&nbsp;д.</p>
+<hr noshade><div align=right><font size=-1>Дата генерации страницы: 22.03.2005.</font></div></body></html>
