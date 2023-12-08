@@ -10,10 +10,22 @@ import java.util.Objects;
 public class Car extends Vehicle {
     private final int numberOfDoors;
 
+    private int carID;
+
+    public int getCarId() {
+        return carID;
+    }
+
+    public void setCarId(int carID) {
+        this.carID = carID;
+    }
+
     public Car(Builder builder) {
         super(builder);
         this.numberOfDoors = builder.numberOfDoors;
     }
+
+
 
 
     public int getNumberOfDoors() {
