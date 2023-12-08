@@ -37,7 +37,7 @@ public class Vehicle {
         }
 
         String brand = parts[0].trim();
-        int year = Integer.parseInt(parts[1].trim().replaceAll("year=", ""));
+        int year = Integer.parseInt(parts[1].trim().replaceAll(" year", ""));
         String color = parts[2].trim();
 
         return new Builder(brand,year,color).build();
@@ -53,11 +53,9 @@ public class Vehicle {
      */
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "brand='" + brand + '\'' +
-                ", year=" + year +
-                ", color='" + color + '\'' +
-                '}';
+        return "Vehicle: " + brand +
+                ", " + year +
+                " year, " + color;
     }
 
     /**

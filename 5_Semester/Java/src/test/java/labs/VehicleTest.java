@@ -31,6 +31,6 @@ public class VehicleTest {
     public void testVehicleToString() {
         Vehicle vehicle = new Vehicle.Builder("Toyota",2020,"yellow").build();
 
-        assertEquals(vehicle.toString(), "Vehicle{brand='Toyota', year=2020, color='yellow'}");
+        assertEquals(vehicle.toString(), "Vehicle: Toyota, 2020 year, yellow");
     }
 }

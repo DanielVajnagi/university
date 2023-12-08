@@ -33,7 +33,95 @@ public class VehicleServiceTest {
 
         return new Object[][] {
                 { cars, List.of("BMW", "Honda", "Toyota") }
-                // Додайте інші тестові набори, якщо потрібно
+        };
+    }
+
+    @Test(dataProvider = "filterByYearData")
+    public void testFilterByYear(List<Car> inputCars, int year, List<Car> expectedFilteredCars) {
+        VehicleService vehicleService = new VehicleService(inputCars);
+        List<Car> filteredCars = vehicleService.filterByYear(year);
+
+        assertEquals(filteredCars, expectedFilteredCars);
+    }
+
+    @DataProvider(name = "filterByYearData")
+    public Object[][] provideFilterByYearData() {
+        Car car1 = new Car.Builder("Toyota", 2020, "yellow").setNumberOfDoors(4).build();
+        Car car2 = new Car.Builder("Honda", 2019, "blue").setNumberOfDoors(4).build();
+        Car car3 = new Car.Builder("BMW", 2022, "black").setNumberOfDoors(2).build();
+        Car car4 = new Car.Builder("Audi", 2022, "white").setNumberOfDoors(4).build();
+
+        List<Car> cars = new ArrayList<>();
+        cars.add(car1);
+        cars.add(car2);
+        cars.add(car3);
+        cars.add(car4);
+
+        return new Object[][] {
+                { cars, 2022, List.of(car3, car4) },
+                { cars, 2019, List.of(car2) },
+                { cars, 2023, List.of() }
+        };
+    }
+
+    @Test(dataProvider = "filterByNumberOfDoorsData")
+    public void testFilterByNumberOfDoors(List<Car> inputCars, int minNumberOfDoors, List<Car> expectedFilteredCars) {
+        VehicleService vehicleService = new VehicleService(inputCars);
+        List<Car> filteredCars = vehicleService.filterByNumberOfDoors(minNumberOfDoors);
+
+        assertEquals(filteredCars, expectedFilteredCars);
+    }
+
+    @DataProvider(name = "filterByNumberOfDoorsData")
+    public Object[][] provideFilterByNumberOfDoorsData() {
+        Car car1 = new Car.Builder("Toyota", 2020, "yellow").setNumberOfDoors(4).build();
+        Car car2 = new Car.Builder("Honda", 2019, "blue").setNumberOfDoors(4).build();
+        Car car3 = new Car.Builder("BMW", 2022, "black").setNumberOfDoors(2).build();
+        Car car4 = new Car.Builder("Audi", 2022, "white").setNumberOfDoors(4).build();
+
+        List<Car> cars = new ArrayList<>();
+        cars.add(car1);
+        cars.add(car2);
+        cars.add(car3);
+        cars.add(car4);
+
+        return new Object[][] {
+                { cars, 2, List.of(car1, car2,car3, car4) },  // Вибираємо авто з 3 і більше дверей
+                { cars, 4, List.of(car1, car2, car4) },  // Вибираємо авто з 4 і більше дверей
+                { cars, 5, List.of() }  // Немає авто з 5 і більше дверей
+        };
+    }
+
+
+    @Test(dataProvider = "sortByYearData")
+    public void testSortByYear(List<Car> inputCars, List<Car> expectedSortedCars) {
+        VehicleService vehicleService = new VehicleService(inputCars);
+        List<Car> sortedCars = vehicleService.sortByYear();
+
+        assertEquals(sortedCars, expectedSortedCars);
+    }
+
+    @DataProvider(name = "sortByYearData")
+    public Object[][] provideSortByYearData() {
+        Car car1 = new Car.Builder("Toyota", 2020, "yellow").setNumberOfDoors(4).build();
+        Car car2 = new Car.Builder("Honda", 2019, "blue").setNumberOfDoors(4).build();
+        Car car3 = new Car.Builder("BMW", 2022, "black").setNumberOfDoors(2).build();
+        Car car4 = new Car.Builder("Audi", 2023, "white").setNumberOfDoors(4).build();
+
+        List<Car> cars = new ArrayList<>();
+        cars.add(car1);
+        cars.add(car2);
+        cars.add(car3);
+        cars.add(car4);
+
+        List<Car> sortedCars = new ArrayList<>();
+        sortedCars.add(car2);
+        sortedCars.add(car1);
+        sortedCars.add(car3);
+        sortedCars.add(car4);
+
+        return new Object[][] {
+                { cars, sortedCars }
         };
     }
 }

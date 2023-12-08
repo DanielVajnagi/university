@@ -12,10 +12,6 @@ public class TxtSerializer<T> implements EntitySerializer<T> {
 
     private Function<String, T> deserializer;
 
-    public TxtSerializer(Function<String, T> deserializer) {
-        this.deserializer = deserializer;
-    }
-
     @Override
     public String serialize(T object) {
         return object.toString();

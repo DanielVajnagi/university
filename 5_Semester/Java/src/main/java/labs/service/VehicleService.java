@@ -3,19 +3,17 @@ package labs.service;
 import labs.Car;
 import labs.interfaces.VehicleServiceInterface;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class VehicleService implements VehicleServiceInterface {
-
-
     private final List<Car> cars;
-
     public VehicleService(List<Car> cars) {
         this.cars = cars;
     }
-
     @Override
     public List<Car> sortByBrand() {
         Collections.sort(cars, new Comparator<Car>() {
@@ -28,25 +26,26 @@ public class VehicleService implements VehicleServiceInterface {
         return cars;
     }
 
-    @Override
     public List<Car> filterByYear(int year) {
-        // Реалізація фільтрації за роком
-        // Повертає список автомобілів, які відповідають заданому року
-        return null;
+        List<Car> result = new ArrayList<>();
+        for (Car car : cars) {
+            if (car.getYear() == year) {
+                result.add(car);
+            }
+        }
+        return result;
     }
-
     @Override
     public List<Car> filterByNumberOfDoors(int minNumberOfDoors) {
-        // Реалізація фільтрації за кількістю дверей
-        // Повертає список автомобілів, які мають не менше дверей, ніж вказано
-        return null;
+        return cars.stream()
+                .filter(car -> car.getNumberOfDoors() >= minNumberOfDoors)
+                .collect(Collectors.toList());
     }
-
     @Override
     public List<Car> sortByYear() {
-        // Реалізація сортування за роком
-        // Наприклад, використовуючи Comparator і Collections.sort()
-        // Повертає відсортований список
-        return null;
+        return cars.stream()
+                .sorted((car1, car2) -> Integer.compare(car1.getYear(), car2.getYear()))
+                .collect(Collectors.toList());
     }
 }
+

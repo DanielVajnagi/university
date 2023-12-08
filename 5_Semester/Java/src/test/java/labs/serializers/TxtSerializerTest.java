@@ -44,6 +44,7 @@ public class TxtSerializerTest {
             }
         }
 
+
         // Перевірка результатів
         Assert.assertNotNull(readVehicles);
         Assert.assertEquals(readVehicles.size(), 2);

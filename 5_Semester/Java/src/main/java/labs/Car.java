@@ -21,12 +21,10 @@ public class Car extends Vehicle {
     }
     @Override
     public String toString() {
-        return "Car{" +
-                "brand='" + brand + '\'' +
-                ", year=" + year +
-                ", color='" + color + '\'' +
-                ", numberOfDoors=" + numberOfDoors +
-                '}';
+        return "Car: " + brand + ", " + year +
+                " year, " + color + '\'' +
+                ", with " + numberOfDoors +
+                "doors";
     }
 
     @Override

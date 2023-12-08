@@ -1,2 +1,2 @@
-Vehicle{brand='Toyota', year=2022, color='Red'}
-Vehicle{brand='Honda', year=2023, color='Blue'}
+Vehicle: Toyota, 2022 year, Red
+Vehicle: Honda, 2023 year, Blue

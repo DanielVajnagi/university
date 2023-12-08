@@ -18,7 +18,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.10.1")
 
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.16.0")
-
+    implementation ("mysql:mysql-connector-java:8.0.28")
     implementation("org.hibernate:hibernate-validator:8.0.0.Final")
     implementation ("org.glassfish:jakarta.el:4.0.2")
     implementation ("org.hibernate.validator:hibernate-validator:8.0.0.Final")
