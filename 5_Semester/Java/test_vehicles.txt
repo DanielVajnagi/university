@@ -1,2 +1,0 @@
-Vehicle: Toyota, 2022 year, Red
-Vehicle: Honda, 2023 year, Blue

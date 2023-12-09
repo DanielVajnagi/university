@@ -7,13 +7,12 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) {
+        String testFilePath = "test_vehicles.txt";
 
-        // Створення об'єкта Vehicle
-        Vehicle myVehicle = new Vehicle.Builder("Toyota", 2020, "21").build();
+        Vehicle myVehicle = new Vehicle.Builder("Toyota", 2022, "Blue").build();
 
-        System.out.println(myVehicle);
-
-        // Отримуємо з'єднання до бази даних
+        //System.out.println(readFromFile());
+/*
         try (Connection connection = DBConnector.getConnection()) {
             String selectQuery = "SELECT * FROM rental.cars";
 
@@ -34,6 +33,6 @@ public class Main {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+*/
     }
 }

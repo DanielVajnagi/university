@@ -23,8 +23,8 @@ public class InsertDriver {
             insertDataIntoCarsTable(connection, car2);
 
             // Створення об'єктів Driver
-            Driver driver1 = new Driver.Builder("John", LocalDate.of(1990, 5, 15), car1.getCarId()).build();
-            Driver driver2 = new Driver.Builder("Alice", LocalDate.of(1992, 6, 1), car2.getCarId()).build();
+            Driver driver1 = new Driver.Builder("John", LocalDate.of(1990, 5, 15), car1).build();
+            Driver driver2 = new Driver.Builder("Alice", LocalDate.of(1992, 6, 1), car2).build();
 
             // Додавання даних в таблицю Drivers
             insertDataIntoDriversTable(connection, driver1);
@@ -65,8 +65,8 @@ public class InsertDriver {
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertDataSQL)) {
             preparedStatement.setString(1, driver.getName());
             preparedStatement.setDate(2, java.sql.Date.valueOf(driver.getDateOfBirth()));
-            preparedStatement.setInt(3, driver.getCarID());
-            preparedStatement.executeUpdate();
+            preparedStatement.setInt(3, driver.getCar().getCarId());
+                preparedStatement.executeUpdate();
 
             System.out.println("Data inserted into Drivers table successfully.");
         }

@@ -1,6 +1,5 @@
 package labs.serializers;
 
-import labs.Vehicle;
 import labs.interfaces.EntitySerializer;
 
 import java.io.*;
@@ -11,6 +10,10 @@ import java.util.function.Function;
 public class TxtSerializer<T> implements EntitySerializer<T> {
 
     private Function<String, T> deserializer;
+
+    public TxtSerializer(Function<String, T> deserializer) {
+        this.deserializer = deserializer;
+    }
 
     @Override
     public String serialize(T object) {

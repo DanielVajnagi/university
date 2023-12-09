@@ -6,12 +6,12 @@ import java.util.Objects;
 public class Driver {
     private final String name;
     private final LocalDate dateOfBirth;
-    private final int carID;
+    private final Car car;
 
     private Driver(Builder builder) {
         this.name = builder.name;
         this.dateOfBirth = builder.dateOfBirth;
-        this.carID = builder.carID;
+        this.car = builder.car;
     }
 
     public String getName() {
@@ -21,8 +21,8 @@ public class Driver {
         return dateOfBirth;
     }
 
-    public int getCarID() {
-        return carID;
+    public Car getCar() {
+        return car;
     }
 
     @Override
@@ -31,13 +31,12 @@ public class Driver {
         if (o == null || getClass() != o.getClass()) return false;
         Driver driver = (Driver) o;
         return Objects.equals(name, driver.name) &&
-                Objects.equals(dateOfBirth, driver.dateOfBirth) &&
-                Objects.equals(carID, driver.carID);
+                Objects.equals(dateOfBirth, driver.dateOfBirth);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, dateOfBirth, carID);
+        return Objects.hash(name, dateOfBirth, car);
     }
 
     @Override
@@ -45,19 +44,19 @@ public class Driver {
         return "Driver{" +
                 "name='" + name + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
-                ", carID=" + carID +
+                ", Car=" + car.toString() +
                 '}';
     }
 
     public static class Builder {
         private String name;
         private LocalDate dateOfBirth;
-        private int carID;
+        private Car car;
 
-        public Builder(String name, LocalDate dateOfBirth, int carID) {
+        public Builder(String name, LocalDate dateOfBirth, Car car) {
             this.name = name;
             this.dateOfBirth = dateOfBirth;
-            this.carID = carID;
+            this.car = car;
         }
 
         public Builder setName(String name) {
@@ -70,8 +69,8 @@ public class Driver {
             return this;
         }
 
-        public Builder setCarID(int carID) {
-            this.carID = carID;
+        public Builder setCar(Car car) {
+            this.car = car;
             return this;
         }
 

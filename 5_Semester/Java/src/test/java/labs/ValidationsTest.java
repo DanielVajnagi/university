@@ -52,7 +52,7 @@ public class ValidationsTest {
                     .setNumberOfDoors(4)
                     .build();
         } catch (IllegalArgumentException e) {
-            assertEquals(e.getMessage(), "Car from future are not allowed");
+            assertEquals(e.getMessage(), "Cars from the future are not allowed");
         }
     }
 

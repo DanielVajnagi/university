@@ -2,7 +2,6 @@ package labs;
 
 import java.time.Year;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,11 +13,46 @@ public class Vehicle {
     protected int year;
     protected String color;
 
+    protected List<String> validationErrors=new ArrayList<>();
+
     protected Vehicle(Builder builder) {
         this.brand = builder.brand;
         this.year = builder.year;
         this.color = builder.color;
+        validateFields();
     }
+
+    private void validateFields() {
+        List<String> validationErrors=new ArrayList<>();
+        validateBrand();
+        validateYear();
+        validateColor();
+        if (!validationErrors.isEmpty()) {
+            throw new IllegalArgumentException(String.join(". ", validationErrors));
+        }
+    }
+
+    private void validateBrand() {
+        if (brand == null || brand.isEmpty()) {
+            validationErrors.add("Brand must be specified");
+        }
+    }
+
+    private void validateYear() {
+        if (year < 1900) {
+            validationErrors.add("Too old to be driven");
+        }
+        if (year > Year.now().getValue()) {
+            validationErrors.add("Cars from the future are not allowed");
+        }
+    }
+
+    private void validateColor() {
+        if (color == null || color.isEmpty()) {
+            validationErrors.add("Color must be specified");
+        }
+    }
+
     public String getBrand() {
         return brand;
     }
@@ -30,6 +64,7 @@ public class Vehicle {
     public String getColor() {
         return color;
     }
+
     public static Vehicle fromString(String data) {
         String[] parts = data.split(",");
         if (parts.length != 3) {
@@ -40,15 +75,14 @@ public class Vehicle {
         int year = Integer.parseInt(parts[1].trim().replaceAll(" year", ""));
         String color = parts[2].trim();
 
-        return new Builder(brand,year,color).build();
+        return new Builder(brand, year, color).build();
     }
+
     public int compareTo(Vehicle other) {
         return Integer.compare(this.year, other.year);
     }
 
-
     /**
-     *
      * @return A string representation of the object.
      */
     @Override
@@ -71,6 +105,7 @@ public class Vehicle {
         Vehicle vehicle = (Vehicle) o;
         return year == vehicle.year && brand.equals(vehicle.brand) && color.equals(vehicle.color);
     }
+
     /**
      * Returns a hash code value for the object.
      *
@@ -80,6 +115,7 @@ public class Vehicle {
     public int hashCode() {
         return Objects.hash(brand, year, color);
     }
+
     /**
      * Represents a builder for creating instances of the {@link Vehicle} class.
      */
@@ -88,44 +124,17 @@ public class Vehicle {
         protected int year;
         protected String color;
 
-        protected List<String> validationErrors;
-
 
 
         public Builder(String brand, int year, String color) {
             this.brand = brand;
             this.year = year;
             this.color = color;
-            this.validationErrors = new ArrayList<>();
         }
-        protected void validateFields() {
-            validateBrand();
-            validateYear();
-            validateColor();
-            if (!validationErrors.isEmpty()) {
-                throw new IllegalArgumentException(String.join(". ", validationErrors));
-            }
-        }
-        private void validateBrand() {
-            if (brand == null || brand.isEmpty()) {
-                validationErrors.add("Brand must be specified");
-            }
-        }
-        private void validateYear() {
-            if (year < 1900) {
-                validationErrors.add("Too old to be driven");
-            }
-            if (year > Year.now().getValue()) {
-                validationErrors.add("Car from future are not allowed");
-            }
-        }
-        private void validateColor() {
-            if (color == null || color.isEmpty()) {
-                validationErrors.add("Color must be specified");
-            }
-        }
+
+
+
         public Vehicle build() {
-            validateFields();
             return new Vehicle(this);
         }
     }
