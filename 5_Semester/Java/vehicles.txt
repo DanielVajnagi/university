@@ -1,0 +1,1 @@
+Vehicle: Toyota, 2022 year, Blue

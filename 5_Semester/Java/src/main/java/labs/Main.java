@@ -10,8 +10,8 @@ public class Main {
         String testFilePath = "test_vehicles.txt";
 
         Vehicle myVehicle = new Vehicle.Builder("Toyota", 2022, "Blue").build();
+        System.out.println(myVehicle);
 
-        //System.out.println(readFromFile());
 /*
         try (Connection connection = DBConnector.getConnection()) {
             String selectQuery = "SELECT * FROM rental.cars";

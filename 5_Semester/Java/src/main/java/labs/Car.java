@@ -28,7 +28,7 @@ public class Car extends Vehicle {
 
     private void validateNumberOfDoors(int numberOfDoors) {
         if (numberOfDoors < 1) {
-            validationErrors.add("Number of doors must be more than 0");
+            throw new IllegalArgumentException("Number of doors must be more than 0");
         }
     }
 

@@ -1,23 +1,19 @@
 package labs.serializers;
 
 import labs.Car;
-
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.io.*;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class TxtSerializerTest {
 
     private TxtSerializer<Car> format;
-    private final String testFilePath = "cars.txt";
 
 
     @BeforeMethod
@@ -26,7 +22,7 @@ public class TxtSerializerTest {
     }
 
     @Test
-    public void testSerializeAndDeserialize() throws IOException {
+    public void testSerializeAndDeserialize() {
         Car car = new Car.Builder("Bentley", 2022, "Space Blue").setNumberOfDoors(2).build();
         String serialized = format.serialize(car);
 
@@ -48,6 +44,7 @@ public class TxtSerializerTest {
                 new Car.Builder("Nissan", 2013, "Gray").setNumberOfDoors(2).build(),
                 new Car.Builder("Mitsubishi", 1996, "Red").setNumberOfDoors(2).build()
         );
+        String testFilePath = "cars.txt";
         format.writeToFile(cars, testFilePath);
 
         Assert.assertTrue(Files.exists(Paths.get(testFilePath)));

@@ -35,17 +35,21 @@ public class VehicleService implements VehicleServiceInterface {
         }
         return result;
     }
-    @Override
     public List<Car> filterByNumberOfDoors(int minNumberOfDoors) {
-        return cars.stream()
-                .filter(car -> car.getNumberOfDoors() >= minNumberOfDoors)
-                .collect(Collectors.toList());
+        List<Car> filteredCars = new ArrayList<>();
+        for (Car car : cars) {
+            if (car.getNumberOfDoors() >= minNumberOfDoors) {
+                filteredCars.add(car);
+            }
+        }
+        return filteredCars;
     }
-    @Override
+
     public List<Car> sortByYear() {
-        return cars.stream()
-                .sorted((car1, car2) -> Integer.compare(car1.getYear(), car2.getYear()))
-                .collect(Collectors.toList());
+        List<Car> sortedCars = new ArrayList<>(cars);
+        sortedCars.sort(Comparator.comparingInt(Car::getYear));
+        return sortedCars;
     }
+
 }
 

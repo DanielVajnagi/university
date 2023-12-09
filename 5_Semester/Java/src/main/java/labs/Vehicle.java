@@ -4,6 +4,8 @@ import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Represents a generic vehicle.
@@ -13,7 +15,7 @@ public class Vehicle {
     protected int year;
     protected String color;
 
-    protected List<String> validationErrors=new ArrayList<>();
+    //protected List<String> validationErrors=new ArrayList<>();
 
     protected Vehicle(Builder builder) {
         this.brand = builder.brand;
@@ -24,7 +26,11 @@ public class Vehicle {
 
     private void validateFields() {
         List<String> validationErrors=new ArrayList<>();
-        validateBrand();
+        try {
+            validateBrand();
+        }catch (IllegalArgumentException e){
+            validationErrors.add(e.getMessage());
+        }
         validateYear();
         validateColor();
         if (!validationErrors.isEmpty()) {
@@ -34,22 +40,22 @@ public class Vehicle {
 
     private void validateBrand() {
         if (brand == null || brand.isEmpty()) {
-            validationErrors.add("Brand must be specified");
+            throw new IllegalArgumentException("Brand must be specified");
         }
     }
 
     private void validateYear() {
         if (year < 1900) {
-            validationErrors.add("Too old to be driven");
+            throw new IllegalArgumentException("Too old to be driven");
         }
         if (year > Year.now().getValue()) {
-            validationErrors.add("Cars from the future are not allowed");
+            throw new IllegalArgumentException("Cars from the future are not allowed");
         }
     }
 
     private void validateColor() {
         if (color == null || color.isEmpty()) {
-            validationErrors.add("Color must be specified");
+            throw new IllegalArgumentException("Color must be specified");
         }
     }
 
@@ -65,17 +71,20 @@ public class Vehicle {
         return color;
     }
 
-    public static Vehicle fromString(String data) {
-        String[] parts = data.split(",");
-        if (parts.length != 3) {
-            throw new IllegalArgumentException("Invalid data format");
+    public static Vehicle fromString(String inputString) {
+        String patternString = "Vehicle: (.*), (\\d+) year, (.*)";
+
+        Pattern pattern = Pattern.compile(patternString);
+        Matcher matcher = pattern.matcher(inputString);
+
+        if (matcher.matches()) {
+            String brand = matcher.group(1);
+            int year = Integer.parseInt(matcher.group(2));
+            String color = matcher.group(3);
+            return new Vehicle.Builder(brand, year, color).build();
+        } else {
+            throw new IllegalArgumentException("Pattern does not match the input string");
         }
-
-        String brand = parts[0].trim();
-        int year = Integer.parseInt(parts[1].trim().replaceAll(" year", ""));
-        String color = parts[2].trim();
-
-        return new Builder(brand, year, color).build();
     }
 
     public int compareTo(Vehicle other) {

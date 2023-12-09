@@ -1,5 +1,7 @@
 package labs.serializers;
 
+import labs.Car;
+import labs.Vehicle;
 import labs.interfaces.EntitySerializer;
 
 import java.io.*;
@@ -9,7 +11,17 @@ import java.util.function.Function;
 
 public class TxtSerializer<T> implements EntitySerializer<T> {
 
-    private Function<String, T> deserializer;
+    public static void main(String[] args) throws IOException {
+        TxtSerializer<Car> format=new TxtSerializer<>(Car::fromString);
+        String testFilePath = "cars.txt";
+        System.out.println(format.readFromFile(testFilePath));
+
+        TxtSerializer<Vehicle> formatv=new TxtSerializer<>(Vehicle::fromString);
+        String testFilePathv = "vehicles.txt";
+        System.out.println(formatv.readFromFile(testFilePathv));
+
+    }
+    private final Function<String, T> deserializer;
 
     public TxtSerializer(Function<String, T> deserializer) {
         this.deserializer = deserializer;
