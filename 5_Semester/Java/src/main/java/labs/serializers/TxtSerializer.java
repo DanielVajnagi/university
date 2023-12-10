@@ -11,21 +11,21 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import static labs.Car.fromString;
 
 public class TxtSerializer<T extends StringSerializable>  implements EntitySerializer<T> {
 
-    private final Type typeOfT;
+    private final StringSerializable typeOfT;
     public static void main(String[] args) throws IOException {
-        TxtSerializer<Car> CarTxtSerializer = new TxtSerializer<>(Car.class);
-
+        TxtSerializer<Car> CarTxtSerializer = new TxtSerializer<>(new Car());
         String testFilePath = "cars.txt";
         System.out.println(CarTxtSerializer.readFromFile(testFilePath));
 
-
+        TxtSerializer<Vehicle> vehicleTxtSerializer= new TxtSerializer<>(new Vehicle());
+        String testFilePathv = "vehicles.txt";
+        System.out.println(vehicleTxtSerializer.readFromFile(testFilePathv));
     }
 
-    public TxtSerializer(Class<T> typeOfT) {
+    public TxtSerializer(StringSerializable typeOfT) {
         this.typeOfT = typeOfT;
     }
     @Override
@@ -34,7 +34,7 @@ public class TxtSerializer<T extends StringSerializable>  implements EntitySeria
     }
     @Override
     public T deserialize(String data) {
-        return typeOfT.fromString(data);
+        return (T) typeOfT.fromString(data);
     }
     @Override
     public void writeToFile(List<T> objects, String filePath) throws IOException {
@@ -57,7 +57,7 @@ public class TxtSerializer<T extends StringSerializable>  implements EntitySeria
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                objects.add(typeOfT.fromString(line));
+                objects.add((T) typeOfT.fromString(line));
             }
         }
         return objects;

@@ -18,7 +18,7 @@ public class TxtSerializerTest {
 
     @BeforeMethod
     public void setUp() {
-        format = new TxtSerializer<>(Car.class);
+        format = new TxtSerializer<>(new Car());
     }
 
     @Test

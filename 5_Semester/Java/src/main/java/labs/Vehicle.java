@@ -1,5 +1,7 @@
 package labs;
 
+import labs.interfaces.StringSerializable;
+
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,7 @@ import java.util.regex.Pattern;
 /**
  * Represents a generic vehicle.
  */
-public class Vehicle {
+public class Vehicle implements StringSerializable {
     protected String brand;
     protected int year;
     protected String color;
@@ -22,6 +24,9 @@ public class Vehicle {
         this.year = builder.year;
         this.color = builder.color;
         validateFields();
+    }
+
+    public Vehicle() {
     }
 
     private void validateFields() {
@@ -71,7 +76,7 @@ public class Vehicle {
         return color;
     }
 
-    public static Vehicle fromString(String inputString) {
+    public Vehicle fromString(String inputString) {
         String patternString = "Vehicle: (.*), (\\d+) year, (.*)";
 
         Pattern pattern = Pattern.compile(patternString);

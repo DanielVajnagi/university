@@ -2,6 +2,7 @@ package labs;
 
 import labs.interfaces.StringSerializable;
 
+import java.lang.reflect.Type;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -9,8 +10,8 @@ import java.util.regex.Pattern;
 /**
  * Represents a car, which is a type of vehicle.
  */
-public class Car extends Vehicle implements StringSerializable{
-    private final int numberOfDoors;
+public class Car extends Vehicle {
+    private int numberOfDoors;
 
     private int carID;
 
@@ -27,7 +28,8 @@ public class Car extends Vehicle implements StringSerializable{
         this.numberOfDoors = builder.numberOfDoors;
         validateNumberOfDoors(numberOfDoors);
     }
-
+    public Car() {
+    }
     private void validateNumberOfDoors(int numberOfDoors) {
         if (numberOfDoors < 1) {
             throw new IllegalArgumentException("Number of doors must be more than 0");
@@ -46,7 +48,8 @@ public class Car extends Vehicle implements StringSerializable{
                 " doors";
     }
 
-    public static Car fromString(String data) {
+    @Override
+    public Car fromString(String data) {
         String patternString = "Car: (.*), (\\d+) year, (.*), with (\\d+) doors";
 
         Pattern pattern = Pattern.compile(patternString);
