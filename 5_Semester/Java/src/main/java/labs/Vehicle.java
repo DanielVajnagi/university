@@ -98,7 +98,7 @@ public class Vehicle {
     public String toString() {
         return "Vehicle: " + brand +
                 ", " + year +
-                " year, " + color;
+                " year,  " + color;
     }
 
     /**

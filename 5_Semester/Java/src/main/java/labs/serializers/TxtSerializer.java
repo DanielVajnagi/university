@@ -1,42 +1,41 @@
 package labs.serializers;
 
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import labs.Car;
 import labs.Vehicle;
 import labs.interfaces.EntitySerializer;
+import labs.interfaces.StringSerializable;
 
 import java.io.*;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
 
-public class TxtSerializer<T> implements EntitySerializer<T> {
+import static labs.Car.fromString;
 
+public class TxtSerializer<T extends StringSerializable>  implements EntitySerializer<T> {
+
+    private final Type typeOfT;
     public static void main(String[] args) throws IOException {
-        TxtSerializer<Car> format=new TxtSerializer<>(Car::fromString);
+        TxtSerializer<Car> CarTxtSerializer = new TxtSerializer<>(Car.class);
+
         String testFilePath = "cars.txt";
-        System.out.println(format.readFromFile(testFilePath));
+        System.out.println(CarTxtSerializer.readFromFile(testFilePath));
 
-        TxtSerializer<Vehicle> formatv=new TxtSerializer<>(Vehicle::fromString);
-        String testFilePathv = "vehicles.txt";
-        System.out.println(formatv.readFromFile(testFilePathv));
 
     }
-    private final Function<String, T> deserializer;
 
-    public TxtSerializer(Function<String, T> deserializer) {
-        this.deserializer = deserializer;
+    public TxtSerializer(Class<T> typeOfT) {
+        this.typeOfT = typeOfT;
     }
-
     @Override
     public String serialize(T object) {
         return object.toString();
     }
-
     @Override
     public T deserialize(String data) {
-        return deserializer.apply(data);
+        return typeOfT.fromString(data);
     }
-
     @Override
     public void writeToFile(List<T> objects, String filePath) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
@@ -58,7 +57,7 @@ public class TxtSerializer<T> implements EntitySerializer<T> {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                objects.add(deserializer.apply(line));
+                objects.add(typeOfT.fromString(line));
             }
         }
         return objects;
