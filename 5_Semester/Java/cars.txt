@@ -1,3 +1,3 @@
 Car: Toyota, 2017 year, White, with 4 doors
-Car: Nissan, 2013 year, Gray, with 2 doors
-Car: Mitsubishi, 1996 year, Red, with 2 doors
+Car: Nissan, 201 year, Yellow, with 2 doors
+Car: Mitsubishi, 1996 year, Red, with 10 doors

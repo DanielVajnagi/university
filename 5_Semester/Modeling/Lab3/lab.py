@@ -8,7 +8,7 @@ t0, t1, T = 0.0, 5 / max(abs(lbd1), abs(lbd2)), 1.0
 n = 25
 h_min = t1 / n
 r = t1 / 3
-h_max = 3* h_min
+h_max = 5* h_min
 y1=y10
 y2=y20
 t_values = [t0]
@@ -109,3 +109,5 @@ while i<len(t_values):
 table = pd.DataFrame({'T': t_values, 'X': x_values, 'X_tochne':xt, 'delta_X':delta_x, 'Y': y_values, 'Y_tochne':yt, 'delta_Y':delta_y})
 table.to_csv('output.csv', index=False)
 print(t1)
+print(h_min)
+print(h_max)
