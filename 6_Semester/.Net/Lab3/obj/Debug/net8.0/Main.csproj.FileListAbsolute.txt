@@ -1,0 +1,15 @@
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\bin\Debug\net8.0\Main.exe
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\bin\Debug\net8.0\Main.deps.json
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\bin\Debug\net8.0\Main.runtimeconfig.json
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\bin\Debug\net8.0\Main.dll
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\bin\Debug\net8.0\Main.pdb
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\Main.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\Main.AssemblyInfo.cs
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\Main.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\Main.sourcelink.json
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\Main.dll
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\refint\Main.dll
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\Main.pdb
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\Main.genruntimeconfig.cache
+C:\Users\Daniel\Documents\university\6_Semester\.Net\Lab3\obj\Debug\net8.0\ref\Main.dll
